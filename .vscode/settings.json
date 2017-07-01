@@ -8,7 +8,7 @@
         /** 
          * Base Colors 
          */
-        "focusBorder": "#0e6a0e",
+        "focusBorder": "#0E6A0E",
         "foreground": "",
         "widget.shadow": "",
         "selection.background": "#A7C8A7",
@@ -16,7 +16,7 @@
         /**
          * Button Control
          */
-        "button.background": "#0e6a0e",
+        "button.background": "#0E6A0E",
         "button.foreground": "#FFFFFF",
         "button.hoverBackground": "#107c10",
         /**
@@ -50,7 +50,7 @@
          * Badge
          */
         "badge.foreground": "",
-        "badge.background": "#0e6a0e",
+        "badge.background": "#0E6A0E",
         /**
          * Progress Bar
          */
@@ -59,10 +59,10 @@
          * Lists and Trees 
          *  Colors for list and trees like the File Explorer. An active list/tree has keyboard focus, an inactive does not.
          */
-        "list.activeSelectionBackground": "#083A08",
+        "list.activeSelectionBackground": "#0E6a0E55",
         "list.activeSelectionForeground": "",
         "list.dropBackground": "",
-        "list.focusBackground": "#083A08",
+        "list.focusBackground": "#0E6a0E55",
         "list.highlightForeground": "",
         "list.hoverBackground": "",
         "list.inactiveSelectionBackground": "",
@@ -73,17 +73,17 @@
          * Activity Bar
          *  The Activity Bar is displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
          */
-        "activityBar.background": "",
+        "activityBar.background": "#3a3a3a",
         "activityBar.dropBackground": "",
         "activityBar.foreground": "",
         "activityBar.border": "",
-        "activityBarBadge.background": "",
+        "activityBarBadge.background": "#0E6A0E",
         "activityBarBadge.foreground": "",
         /** 
          * Side Bar
          *  The Side Bar contains views like the Explorer and Search.
          */
-        "sideBar.background": "rgba(173,214,255,.15)",
+        "sideBar.background": "#2f2f2f",
         "sideBar.foreground": "",
         "sideBar.border": "",
         "sideBarTitle.foreground": "",
@@ -110,12 +110,12 @@
          * Editor Colors
          *  The most prominent editor colors are the token colors that are based on the language grammar installed. These colors are defined by the Color Theme and can (currently) not be customized in the settings. All other colors are listed here:
          */
-        "editor.background": "",
+        "editor.background": "#171717", // don't know now I feel about this
         "editor.foreground": "",
         "editorLineNumber.foreground": "",
         "editorCursor.foreground": "",
-        "editor.selectionBackground": "",
-        "editor.selectionHighlightBackground": "",
+        "editor.selectionBackground": "#0E6a0Eaa",
+        "editor.selectionHighlightBackground": "#0E6A0E44",
         "editor.inactiveSelectionBackground": "",
         "editor.wordHighlightBackground": "",
         "editor.wordHighlightStrongBackground": "",
@@ -136,7 +136,7 @@
         "editorOverviewRuler.border": "",
         "editorError.foreground": "",
         "editorError.border": "",
-        "editorWarning.foreground": "#cd9731",
+        "editorWarning.foreground": "#F1F100",
         "editorWarning.border": "",
         "editorGutter.background": "",
         "editorGutter.modifiedBackground": "",
@@ -208,12 +208,12 @@
          * Status Bar Colors
          *  The Status Bar is shown in the bottom of the workbench.
          */
-        "statusBar.background": "#0e6a0e",
+        "statusBar.background": "#0E6A0E",
         "statusBar.foreground": "",
         "statusBar.debuggingBackground": "",
         "statusBar.debuggingForeground": "",
         "statusBar.noFolderForeground": "",
-        "statusBar.noFolderBackground": "#0e6a0e",
+        "statusBar.noFolderBackground": "#0E6A0E",
         "statusBarItem.activeBackground": "",
         "statusBarItem.hoverBackground": "",
         "statusBarItem.prominentBackground": "",
@@ -230,19 +230,19 @@
          * Notification Dialog Colors
          *  Notifications slide in from the top of the workbench.
          */
-        "notification.background": "#0e6a0e",
+        "notification.background": "#0E6A0E",
         "notification.foreground": "",
         /**
          * Extensions
          */
         "extensionButton.prominentForeground": "",
-        "extensionButton.prominentBackground": "#0e6a0e",
-        "extensionButton.prominentHoverBackground": "#107c10",
+        "extensionButton.prominentBackground": "#0E6A0E",
+        "extensionButton.prominentHoverBackground": "#107C10",
         /**
          * Quick Picker
          */
         "pickerGroup.border": "#0000ff",
-        "pickerGroup.foreground": "#0e6a0e",
+        "pickerGroup.foreground": "#0E6A0E",
         /**
          * Integrated Terminal Colors
          */
