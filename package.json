@@ -1,0 +1,43 @@
+{
+    "name": "xbox-theme",
+    "displayName": "Xbox Theme",
+    "description": "Xbox's green theme schema",
+    "version": "0.0.1",
+    "icon": "xbox_one.png",
+    "publisher": "Hector Jimenez",
+    "license": "Apache-2.0",
+    "author": {
+		"email": "hectorjimenez@outlook.com",
+		"name": "Hector Jimenez",
+		"url": "https://github.com/hectorjjb"
+	},
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "repository": {
+		"type": "git",
+		"url": "https://github.com/hectorjjb/vs-code-xbox-theme"
+	},
+    "bugs": {
+		"url": "https://github.com/hectorjjb/vs-code-xbox-theme/issues",
+		"email": "hectorjimenez@outlook.com"
+	},
+    "keywords": [
+		"vscode-theme",
+		"theme"
+	],
+	"preview": true,
+	"homepage": "https://github.com/hectorjjb/vs-code-xbox-theme",
+    "contributes": {
+        "themes": [
+            {
+                "label": "Xbox Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/xbox-color-theme.json"
+            }
+        ]
+    }
+}
