@@ -1,3 +1,3 @@
 # Xbox Theme
 
-Xbox Theme for Visual Studio Code.
+This theme uses the official Xbox palette (mostly) for Visual Studio Code.
