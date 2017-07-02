@@ -2,6 +2,6 @@
 
 This theme uses the official Xbox palette (mostly) for Visual Studio Code.
 
-![demo](https://github.com/hectorjjb/vs-code-xbox-thememaster/images/screenshot-one.jpeg)
+![typescript demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/screenshot-one.jpeg)
 
-![demo](https://github.com/hectorjjb/vs-code-xbox-thememaster/images/screenshot-two.jpeg)
+![html demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/screenshot-two.jpeg)
