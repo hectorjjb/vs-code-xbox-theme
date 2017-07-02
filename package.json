@@ -1,7 +1,7 @@
 {
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
-    "description": "Xbox's green theme schema",
+    "description": "This theme uses the official Xbox palette (mostly) for Visual Studio Code.",
     "version": "0.0.1",
     "icon": "xbox_one.png",
     "publisher": "hector-jimenez",
