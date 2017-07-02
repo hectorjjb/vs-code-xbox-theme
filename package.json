@@ -2,15 +2,15 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "This theme uses the official Xbox palette (mostly) for Visual Studio Code.",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "icon": "xbox_one.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
     "author": {
-		"email": "hectorjimenez@outlook.com",
-		"name": "Hector Jimenez",
-		"url": "https://github.com/hectorjjb"
-	},
+        "email": "hectorjimenez@outlook.com",
+        "name": "Hector Jimenez",
+        "url": "https://github.com/hectorjjb"
+    },
     "engines": {
         "vscode": "^1.13.0"
     },
@@ -18,19 +18,19 @@
         "Themes"
     ],
     "repository": {
-		"type": "git",
-		"url": "https://github.com/hectorjjb/vs-code-xbox-theme"
-	},
+        "type": "git",
+        "url": "https://github.com/hectorjjb/vs-code-xbox-theme"
+    },
     "bugs": {
-		"url": "https://github.com/hectorjjb/vs-code-xbox-theme/issues",
-		"email": "hectorjimenez@outlook.com"
-	},
+        "url": "https://github.com/hectorjjb/vs-code-xbox-theme/issues",
+        "email": "hectorjimenez@outlook.com"
+    },
     "keywords": [
-		"vscode-theme",
-		"theme"
-	],
-	"preview": true,
-	"homepage": "https://github.com/hectorjjb/vs-code-xbox-theme",
+        "vscode-theme",
+        "theme"
+    ],
+    "preview": true,
+    "homepage": "https://github.com/hectorjjb/vs-code-xbox-theme",
     "contributes": {
         "themes": [
             {
