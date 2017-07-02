@@ -4,7 +4,7 @@
     "description": "Xbox's green theme schema",
     "version": "0.0.1",
     "icon": "xbox_one.png",
-    "publisher": "Hector Jimenez",
+    "publisher": "hector-jimenez",
     "license": "Apache-2.0",
     "author": {
 		"email": "hectorjimenez@outlook.com",

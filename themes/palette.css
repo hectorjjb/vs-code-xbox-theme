@@ -4,18 +4,18 @@
 }
 
 .green:hover {
-    background: "#107C10";
+    background: "#107c10";
     border: rgb(16, 124, 16);
 }
 
 
 .light-green {
-    background: "#5CC11D";
+    background: "#5cc11d";
     border: rgb(92, 193, 29);
 }
 
 .light-green:hover {
-    background: "#5DC21E";
+    background: "#5dc21e";
     border: rgb(93, 194, 30);
 }
 
@@ -25,32 +25,47 @@
 }
 
 .dark-gray {
-    background: "#2F2F2F";
+    background: "#2f2f2f";
     border: rgb(47, 47, 47);
 }
 
 .slate-gray {
-    background: "#3A3A3A";
+    background: "#3a3a3a";
     border: rgb(58, 58, 58);
 }
 
 .mid-gray {
-    background: "#6B6B6B";
+    background: "#6b6b6b";
     border: rgb(107, 107, 107);
 }
 
 .light-gray {
-    background: "#C2C2C2";
+    background: "#c2c2c2";
     border: rgb(194, 194, 194);
 }
 
 .white {
-    background: "#F1F1F1";
+    background: "#f1f1f1";
     border: rgb(241, 241, 241);
 }
 
 /* Others */
 .yellow {
-    background: "#F1F100";
-    border: rgb(241, 241, 0);
+    background: "#eae71d";
+    border: rgb(234,231,29);
+}
+
+.orange {
+    background: #e3641a;
+    border: rgb(227,100,26);
+}
+
+.blue {
+    background: #2972d1;
+    border: rgb(41,114,209);
+}
+
+.light-blue {
+    background: #83e7Fb;
+    border: rgb(131,231,251);
 }
