@@ -34,9 +34,14 @@
     "contributes": {
         "themes": [
             {
-                "label": "Xbox Theme",
+                "label": "Xbox Dark Theme",
                 "uiTheme": "vs-dark",
-                "path": "./themes/xbox-color-theme.json"
+                "path": "./themes/xbox-dark-color-theme.json"
+            },
+            {
+                "label": "Xbox Light Theme",
+                "uiTheme": "vs",
+                "path": "./themes/xbox-light-color-theme.json"
             }
         ]
     }

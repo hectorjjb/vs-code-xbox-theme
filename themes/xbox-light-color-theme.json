@@ -1,5 +1,5 @@
 {
-	"type": "dark",
+	"type": "light",
 	"colors": {
 		"focusBorder": "#0e6a0e",
 		"selection.background": "#a7c8a7",
@@ -13,8 +13,8 @@
 		"button.background": "#0e6a0e",
 		"button.hoverBackground": "#107c10",
 		"badge.background": "#0e6a0e",
-		"editor.background": "#171717",
-		"editor.foreground": "#f1f1f1",
+		// "editor.background": "#171717",
+		"editor.foreground": "#3a3a3a",
 		"editor.selectionBackground": "#0e6a0eaa",
 		"editor.inactiveSelectionBackground": "#3a3d41",
 		"editor.selectionHighlightBackground": "#0e6a0e44",
@@ -22,9 +22,9 @@
 		"editorWarning.foreground": "#eae71d",
 		"statusBar.background": "#0e6a0e",
 		"statusBar.noFolderBackground": "#0e6a0e",
-		"activityBar.background": "#3a3a3a",
+		// "activityBar.background": "#3a3a3a",
 		"activityBarBadge.background": "#0e6a0e",
-		"sideBar.background": "#2f2f2f",
+		// "sideBar.background": "#2f2f2f",
 		"sideBarTitle.foreground": "#bbbbbb",
 		"notification.background": "#0e6a0e",
 		"peekView.border": "#0e6a0e",
@@ -34,8 +34,8 @@
 	"tokenColors": [
 		{
 			"settings": {
-				"foreground": "#d4d4d4ff",
-				"background": "#171717ff"
+				"foreground": "#3a3a3aff",
+				"background": "#fffffeff"
 			}
 		},
 		{
@@ -73,7 +73,7 @@
 				"constant.numeric"
 			],
 			"settings": {
-				"foreground": "##C2C2C2"
+				"foreground": "#171717"
 			}
 		},
 		{
@@ -151,7 +151,7 @@
 		{
 			"scope": "markup.inserted",
 			"settings": {
-				"foreground": "#C2C2C2"
+				"foreground": "#171717"
 			}
 		},
 		{
@@ -212,7 +212,7 @@
 		{
 			"scope": "meta.preprocessor.numeric",
 			"settings": {
-				"foreground": "#C2C2C2"
+				"foreground": "#171717"
 			}
 		},
 		{
@@ -308,7 +308,7 @@
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#3a3a3a"
 			}
 		},
 		{
@@ -326,7 +326,7 @@
 		{
 			"scope": "keyword.other.unit",
 			"settings": {
-				"foreground": "#C2C2C2"
+				"foreground": "#171717"
 			}
 		},
 		{
@@ -347,7 +347,7 @@
 		{
 			"scope": "constant.sha.git-rebase",
 			"settings": {
-				"foreground": "#C2C2C2"
+				"foreground": "#171717"
 			}
 		},
 		{
@@ -358,7 +358,7 @@
 				"storage.modifier.package.java"
 			],
 			"settings": {
-				"foreground": "#d4d4d4"
+				"foreground": "#3a3a3a"
 			}
 		},
 		{
