@@ -8,6 +8,7 @@
 		"list.focusBackground": "#0e6a0e55",
 		"list.activeSelectionBackground": "#0e6a0e55",
 		"list.dropBackground": "#383b3d",
+		"list.highlightForeground": "#0e6a0e",
 		"pickerGroup.foreground": "#0e6a0e",
 		"button.foreground": "#ffffff",
 		"button.background": "#0e6a0e",
