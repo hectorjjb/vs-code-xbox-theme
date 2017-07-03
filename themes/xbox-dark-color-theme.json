@@ -13,8 +13,8 @@
 		"button.background": "#0e6a0e",
 		"button.hoverBackground": "#107c10",
 		"badge.background": "#0e6a0e",
-		// "editor.background": "#171717",
-		"editor.foreground": "#f1f1f1",
+		"editor.background": "#1e1e1e",
+		"editor.foreground": "#d4d4d4",
 		"editor.selectionBackground": "#0e6a0eaa",
 		"editor.inactiveSelectionBackground": "#3a3d41",
 		"editor.selectionHighlightBackground": "#0e6a0e44",
@@ -22,11 +22,8 @@
 		"editorWarning.foreground": "#eae71d",
 		"statusBar.background": "#0e6a0e",
 		"statusBar.noFolderBackground": "#0e6a0e",
-		// "activityBar.background": "#3a3a3a",
 		"activityBarBadge.background": "#0e6a0e",
-		// "sideBar.background": "#2f2f2f",
 		"sideBarTitle.foreground": "#bbbbbb",
-		"notification.background": "#0e6a0e",
 		"peekView.border": "#0e6a0e",
 		"extensionButton.prominentBackground": "#0e6a0e",
 		"extensionButton.prominentHoverBackground": "#107c10"
@@ -35,7 +32,7 @@
 		{
 			"settings": {
 				"foreground": "#d4d4d4ff",
-				"background": "#171717ff"
+				"background": "#1e1e1eff"
 			}
 		},
 		{

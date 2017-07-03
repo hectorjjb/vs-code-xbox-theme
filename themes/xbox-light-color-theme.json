@@ -13,20 +13,18 @@
 		"button.background": "#0e6a0e",
 		"button.hoverBackground": "#107c10",
 		"badge.background": "#0e6a0e",
-		// "editor.background": "#171717",
-		"editor.foreground": "#3a3a3a",
+		"editor.background": "#ffffff",
+		"editor.foreground": "#171717",
 		"editor.selectionBackground": "#0e6a0eaa",
-		"editor.inactiveSelectionBackground": "#3a3d41",
+		"editor.inactiveSelectionBackground": "#e5ebf1",
 		"editor.selectionHighlightBackground": "#0e6a0e44",
-		"editorIndentGuide.background": "#404040",
+		"editorIndentGuide.background": "#d3d3d3",
 		"editorWarning.foreground": "#eae71d",
 		"statusBar.background": "#0e6a0e",
 		"statusBar.noFolderBackground": "#0e6a0e",
-		// "activityBar.background": "#3a3a3a",
 		"activityBarBadge.background": "#0e6a0e",
-		// "sideBar.background": "#2f2f2f",
-		"sideBarTitle.foreground": "#bbbbbb",
-		"notification.background": "#0e6a0e",
+		"sideBarTitle.foreground": "#6f6f6f",
+		"editorSuggestWidget.background": "#f3f3f3",
 		"peekView.border": "#0e6a0e",
 		"extensionButton.prominentBackground": "#0e6a0e",
 		"extensionButton.prominentHoverBackground": "#107c10"
@@ -34,8 +32,8 @@
 	"tokenColors": [
 		{
 			"settings": {
-				"foreground": "#3a3a3aff",
-				"background": "#fffffeff"
+				"foreground": "#171717ff",
+				"background": "#ffffffff"
 			}
 		},
 		{

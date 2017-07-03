@@ -73,7 +73,7 @@
          * Activity Bar
          *  The Activity Bar is displayed either on the far left or right of the workbench and allows fast switching between views of the Side Bar.
          */
-        "activityBar.background": "#3a3a3a",
+        "activityBar.background": "",
         "activityBar.dropBackground": "",
         "activityBar.foreground": "",
         "activityBar.border": "",
@@ -83,7 +83,7 @@
          * Side Bar
          *  The Side Bar contains views like the Explorer and Search.
          */
-        "sideBar.background": "#2f2f2f",
+        "sideBar.background": "",
         "sideBar.foreground": "",
         "sideBar.border": "",
         "sideBarTitle.foreground": "",
@@ -110,8 +110,8 @@
          * Editor Colors
          *  The most prominent editor colors are the token colors that are based on the language grammar installed. These colors are defined by the Color Theme and can (currently) not be customized in the settings. All other colors are listed here:
          */
-        "editor.background": "#171717",
-        "editor.foreground": "#f1f1f1",
+        "editor.background": "",
+        "editor.foreground": "",
         "editorLineNumber.foreground": "",
         "editorCursor.foreground": "",
         "editor.selectionBackground": "#0E6a0Eaa",
@@ -241,7 +241,7 @@
         /**
          * Quick Picker
          */
-        "pickerGroup.border": "#0000ff",
+        "pickerGroup.border": "",
         "pickerGroup.foreground": "#0E6A0E",
         /**
          * Integrated Terminal Colors
