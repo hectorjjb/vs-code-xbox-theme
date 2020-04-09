@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "This theme uses the official Xbox palette (mostly) for Visual Studio Code.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "icon": "xbox_one.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
@@ -12,7 +12,7 @@
         "url": "https://github.com/hectorjjb"
     },
     "engines": {
-        "vscode": "^1.13.0"
+        "vscode": "^1.44.0"
     },
     "categories": [
         "Themes"
