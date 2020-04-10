@@ -10,8 +10,8 @@
 
 
 .light-green {
-    background: #5cc11d;
-    border: rgb(92, 193, 29);
+    background: #9bf00b;
+    border: rgb(155,240,11);
 }
 
 .light-green:hover {
@@ -51,8 +51,8 @@
 
 /* Others */
 .yellow {
-    background: #eae71d;
-    border: rgb(234,231,29);
+    background: #ffd800;
+    border: rgb(255,216,0);
 }
 
 .orange {

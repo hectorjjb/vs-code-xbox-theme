@@ -10,7 +10,7 @@
 		"activityBar.inactiveForeground": "#57584f",
 		"activityBarBadge.background": "#107C10",
 		"activityBarBadge.foreground": "#fdfff1",
-		"badge.background": "#107C10",
+		"badge.background": "#ffffff3d",
 		"badge.foreground": "#fdfff1",
 		"breadcrumb.activeSelectionForeground": "#fdfff1",
 		"breadcrumb.background": "#272822",
@@ -304,7 +304,7 @@
 		"statusBarItem.hoverBackground": "#218d21",
 		"statusBarItem.prominentBackground": "#55b155",
 		"statusBarItem.prominentForeground": "#6e7066",
-		"statusBarItem.prominentHoverBackground": "#55b155",
+		"statusBarItem.prominentHoverBackground": "#0000004d",
 		"statusBarItem.remoteBackground": "#107C10",
 		"statusBarItem.remoteForeground": "#272822",
 		"symbolIcon.arrayForeground": "#f92672",
@@ -556,7 +556,7 @@
 				"entity.name.function.templated"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -590,7 +590,7 @@
 		{
 			"scope": "entity.name",
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -621,7 +621,7 @@
 		{
 			"scope": "entity.name.function",
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -631,7 +631,7 @@
 				"entity.name.tag support.class.component"
 			],
 			"settings": {
-				"foreground": "#e3641a"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -653,7 +653,7 @@
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#66D9EF",
+				"foreground": "#F02477",
 				"fontStyle": "italic"
 			}
 		},
@@ -665,7 +665,7 @@
 				"entity.other.attribute-name.css"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -691,7 +691,7 @@
 				"support.function"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -847,7 +847,7 @@
 		{
 			"scope": "markup.underline.link",
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -856,7 +856,7 @@
 				"markup.inserted punctuation.definition.inserted"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -917,7 +917,7 @@
 				"meta.function-call.arguments.python meta.function-call.python"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -929,7 +929,7 @@
 		{
 			"scope": "meta.instance.constructor",
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
@@ -938,7 +938,7 @@
 				"meta.attribute.class.html string"
 			],
 			"settings": {
-				"foreground": "#A6E22E"
+				"foreground": "#F0D900"
 			}
 		},
 		{
@@ -1132,50 +1132,43 @@
 		{
 			"scope": "region.redish",
 			"settings": {
-				"foreground": "#F92672",
-				"background": "#F9267259"
+				"foreground": "#F92672"
 			}
 		},
 		{
 			"scope": "region.orangish",
 			"settings": {
-				"foreground": "#e3641a",
-				"background": "#e3641a59"
+				"foreground": "#e3641a"
 			}
 		},
 		{
 			"scope": "region.yellowish",
 			"settings": {
-				"foreground": "#107C10",
-				"background": "#107C1059"
+				"foreground": "#ffd800"
 			}
 		},
 		{
 			"scope": "region.greenish",
 			"settings": {
-				"foreground": "#A6E22E",
-				"background": "#A6E22E59"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
 			"scope": "region.bluish",
 			"settings": {
-				"foreground": "#66D9EF",
-				"background": "#66D9EF59"
+				"foreground": "#66D9EF"
 			}
 		},
 		{
 			"scope": "region.purplish",
 			"settings": {
-				"foreground": "#AE81FF",
-				"background": "#AE81FF59"
+				"foreground": "#AE81FF"
 			}
 		},
 		{
 			"scope": "region.pinkish",
 			"settings": {
-				"foreground": "#F92672",
-				"background": "#F9267259"
+				"foreground": "#F92672"
 			}
 		},
 		{
@@ -1275,15 +1268,13 @@
 		{
 			"scope": "storage.type.extends",
 			"settings": {
-				"foreground": "#F92672",
-				"fontStyle": "normal"
+				"foreground": "#F92672"
 			}
 		},
 		{
 			"scope": "storage.type.function.arrow",
 			"settings": {
-				"foreground": "#F92672",
-				"fontStyle": "normal"
+				"foreground": "#F92672"
 			}
 		},
 		{
@@ -1342,7 +1333,7 @@
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#107C10"
+				"foreground": "#F0D900"
 			}
 		},
 		{
@@ -1452,7 +1443,6 @@
 			"scope": "support.type.property-name",
 			"settings": {
 				"foreground": "#FDFFF1",
-				"fontStyle": "normal"
 			}
 		},
 		{
