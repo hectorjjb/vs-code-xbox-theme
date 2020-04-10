@@ -1,57 +1,57 @@
 .green {
-    background: "#0e6a0e";
+    background: #0e6a0e;
     border: rgb(14, 106, 14);
 }
 
 .green:hover {
-    background: "#107c10";
+    background: #107c10;
     border: rgb(16, 124, 16);
 }
 
 
 .light-green {
-    background: "#5cc11d";
+    background: #5cc11d;
     border: rgb(92, 193, 29);
 }
 
 .light-green:hover {
-    background: "#5dc21e";
+    background: #5dc21e;
     border: rgb(93, 194, 30);
 }
 
 .black {
-    background: "#171717";
+    background: #171717;
     border: rgb(23, 23, 23);
 }
 
 .dark-gray {
-    background: "#2f2f2f";
+    background: #2f2f2f;
     border: rgb(47, 47, 47);
 }
 
 .slate-gray {
-    background: "#3a3a3a";
+    background: #3a3a3a;
     border: rgb(58, 58, 58);
 }
 
 .mid-gray {
-    background: "#6b6b6b";
+    background: #6b6b6b;
     border: rgb(107, 107, 107);
 }
 
 .light-gray {
-    background: "#c2c2c2";
+    background: #c2c2c2;
     border: rgb(194, 194, 194);
 }
 
 .white {
-    background: "#f1f1f1";
+    background: #f1f1f1;
     border: rgb(241, 241, 241);
 }
 
 /* Others */
 .yellow {
-    background: "#eae71d";
+    background: #eae71d;
     border: rgb(234,231,29);
 }
 

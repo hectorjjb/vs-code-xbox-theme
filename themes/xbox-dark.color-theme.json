@@ -144,9 +144,9 @@
 		"editorWidget.border": "#3b3c35",
 		"editorWidget.foreground": "#fdfff1",
 		"errorForeground": "#f92672",
-		"extensionBadge.remoteBackground": "#107C10",
-		"extensionBadge.remoteForeground": "#272822",
-		"extensionButton.prominentBackground": "#3b3c35",
+		"extensionBadge.remoteBackground": "#e3641a",
+		"extensionBadge.remoteForeground": "#fdfff1",
+		"extensionButton.prominentBackground": "#e3641a",
 		"extensionButton.prominentForeground": "#fdfff1",
 		"extensionButton.prominentHoverBackground": "#57584f",
 		"focusBorder": "#6e7066",
@@ -175,21 +175,21 @@
 		"inputValidation.warningBackground": "#3b3c35",
 		"inputValidation.warningBorder": "#e3641a",
 		"inputValidation.warningForeground": "#e3641a",
-		"list.activeSelectionBackground": "#0c5f0c",
-		"list.activeSelectionForeground": "#272822",
+		"list.activeSelectionBackground": "#272822",
+		"list.activeSelectionForeground": "#fdfff1",
 		"list.deemphasizedForeground": "#8c8c8c",
 		"list.dropBackground": "#1d1e19bf",
 		"list.errorForeground": "#f92672",
 		"list.filterMatchBackground": "#fdfff126",
 		"list.filterMatchBorder": "#00000000",
-		"list.focusBackground": "#218d21",
+		"list.focusBackground": "#272822",
 		"list.focusForeground": "#fdfff1",
 		"list.highlightForeground": "#fdfff1",
 		"list.hoverBackground": "#1d1e19",
 		"list.hoverForeground": "#fdfff1",
 		"list.inactiveFocusBackground": "#272822",
 		"list.inactiveSelectionBackground": "#272822",
-		"list.inactiveSelectionForeground": "#107C10",
+		"list.inactiveSelectionForeground": "#fdfff1",
 		"list.invalidItemForeground": "#f92672",
 		"list.warningForeground": "#e3641a",
 		"listFilterWidget.background": "#272822",
@@ -225,7 +225,7 @@
 		"notificationCenter.border": "#3b3c35",
 		"notificationCenterHeader.background": "#3b3c35",
 		"notificationCenterHeader.foreground": "#919288",
-		"notificationLink.foreground": "#107C10",
+		"notificationLink.foreground": "#9bf00b",
 		"notifications.background": "#3b3c35",
 		"notifications.border": "#3b3c35",
 		"notifications.foreground": "#c0c1b5",
@@ -236,8 +236,8 @@
 		"panel.background": "#3b3c35",
 		"panel.border": "#272822",
 		"panel.dropBackground": "#1d1e19bf",
-		"panelTitle.activeBorder": "#107C10",
-		"panelTitle.activeForeground": "#107C10",
+		"panelTitle.activeBorder": "#fdfff1",
+		"panelTitle.activeForeground": "#fdfff1",
 		"panelTitle.inactiveForeground": "#919288",
 		"peekView.border": "#272822",
 		"peekViewEditor.background": "#3b3c35",
@@ -294,7 +294,7 @@
 		"statusBar.background": "#107C10",
 		"statusBar.border": "#107C10",
 		"statusBar.debuggingBackground": "#e3641a",
-		"statusBar.debuggingBorder": "#107C10",
+		"statusBar.debuggingBorder": "#e3641a",
 		"statusBar.debuggingForeground": "#fdfff1",
 		"statusBar.foreground": "#fdfff1",
 		"statusBar.noFolderBackground": "#107C10",
@@ -341,8 +341,8 @@
 		"symbolIcon.unitForeground": "#ae81ff",
 		"symbolIcon.variableForeground": "#66d9ef",
 		"tab.activeBackground": "#272822",
-		"tab.activeBorder": "#107C10",
-		"tab.activeForeground": "#107C10",
+		"tab.activeBorder": "#9bf00b",
+		"tab.activeForeground": "#9bf00b",
 		"tab.activeModifiedBorder": "#57584f",
 		"tab.border": "#272822",
 		"tab.hoverBackground": "#272822",
@@ -384,7 +384,7 @@
 		"textBlockQuote.border": "#3b3c35",
 		"textCodeBlock.background": "#3b3c35",
 		"textLink.activeForeground": "#fdfff1",
-		"textLink.foreground": "#107C10",
+		"textLink.foreground": "#9bf00b",
 		"textPreformat.foreground": "#fdfff1",
 		"textSeparator.foreground": "#6e7066",
 		"titleBar.activeBackground": "#1d1e19",
@@ -631,7 +631,7 @@
 				"entity.name.tag support.class.component"
 			],
 			"settings": {
-				"foreground": "#F92672"
+				"foreground": "#e3641a"
 			}
 		},
 		{
@@ -1009,7 +1009,7 @@
 				"source.json meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value meta.structure.dictionary meta.structure.dictionary.value string"
 			],
 			"settings": {
-				"foreground": "#107C10"
+				"foreground": "#9bf00b"
 			}
 		},
 		{
