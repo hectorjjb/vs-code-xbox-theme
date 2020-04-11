@@ -146,7 +146,7 @@
 		"errorForeground": "#f92672",
 		"extensionBadge.remoteBackground": "#e3641a",
 		"extensionBadge.remoteForeground": "#fdfff1",
-		"extensionButton.prominentBackground": "#e3641a",
+		"extensionButton.prominentBackground": "#3b3c35",
 		"extensionButton.prominentForeground": "#fdfff1",
 		"extensionButton.prominentHoverBackground": "#57584f",
 		"focusBorder": "#6e7066",
@@ -653,7 +653,7 @@
 		{
 			"scope": "entity.other.attribute-name",
 			"settings": {
-				"foreground": "#F02477",
+				"foreground": "#FFFFFF77",
 				"fontStyle": "italic"
 			}
 		},

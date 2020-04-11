@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "This theme uses the official Xbox palette (mostly) for Visual Studio Code.",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "icon": "xbox_one.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
@@ -37,11 +37,6 @@
                 "label": "Xbox Dark Theme",
                 "uiTheme": "vs-dark",
                 "path": "./themes/xbox-dark.color-theme.json"
-            },
-            {
-                "label": "Xbox Light Theme",
-                "uiTheme": "vs",
-                "path": "./themes/xbox-light.color-theme.json"
             }
         ]
     }
