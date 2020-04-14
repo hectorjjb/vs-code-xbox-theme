@@ -1,15 +1,9 @@
 # Xbox Theme
 
-This theme uses the official Xbox palette (mostly) for Visual Studio Code. There is a Dark and Light version.
+This theme uses the official Xbox palette (mostly) for Visual Studio Code. There is a Dark  version and a Light version comming up soon!
 
-![typescript demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/dark-typescript.jpeg)
+![typescript demo](images/xbox-theme-ts.png)
 
-![html demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/dark-html.jpeg)
+![html demo](images/xbox-theme-html.png)
 
-![less demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/dark-less.jpeg)
-
-![typescript demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/light-typescript.jpeg)
-
-![html demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/light-html.jpeg)
-
-![less demo](https://github.com/hectorjjb/vs-code-xbox-theme/raw/master/images/light-less.jpeg)
+![scss demo](images/xbox-theme-scss.png)

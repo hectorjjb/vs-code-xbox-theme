@@ -198,7 +198,7 @@
 		"menu.background": "#272822",
 		"menu.foreground": "#919288",
 		"menu.selectionBackground": "#272822",
-		"menu.selectionForeground": "#107C10",
+		"menu.selectionForeground": "#9bf00b",
 		"menu.separatorBackground": "#bbbbbb",
 		"menubar.selectionBackground": "#ffffff1a",
 		"menubar.selectionForeground": "#919288",
@@ -301,10 +301,10 @@
 		"statusBar.noFolderBorder": "#107C10",
 		"statusBar.noFolderForeground": "#fdfff1",
 		"statusBarItem.activeBackground": "#218d21",
-		"statusBarItem.hoverBackground": "#218d21",
+		"statusBarItem.hoverBackground": "#ffffff1d",
 		"statusBarItem.prominentBackground": "#55b155",
 		"statusBarItem.prominentForeground": "#6e7066",
-		"statusBarItem.prominentHoverBackground": "#0000004d",
+		"statusBarItem.prominentHoverBackground": "#ffffff1d",
 		"statusBarItem.remoteBackground": "#107C10",
 		"statusBarItem.remoteForeground": "#272822",
 		"symbolIcon.arrayForeground": "#f92672",
@@ -1120,15 +1120,15 @@
 				"foreground": "#F92672"
 			}
 		},
-		{
-			"scope": [
-				"meta.paragraph.markdown meta.dummy.line-break",
-				"meta.paragraph.markdown meta.hard-line-break.markdown"
-			],
-			"settings": {
-				"background": "#AE81FF"
-			}
-		},
+		// {
+		// 	"scope": [
+		// 		"meta.paragraph.markdown meta.dummy.line-break",
+		// 		"meta.paragraph.markdown meta.hard-line-break.markdown"
+		// 	],
+		// 	"settings": {
+		// 		"background": "#AE81FF"
+		// 	}
+		// },
 		{
 			"scope": "region.redish",
 			"settings": {
@@ -1594,6 +1594,20 @@
 			"scope": "token.debug-token",
 			"settings": {
 				"foreground": "#B267E6"
+			}
+		},
+		{
+			"name": "angular",
+			"scope": [
+				"entity.other.attribute-name.id.html",
+				"entity.other.name.attribute-name.id",
+				"entity.other.attribute-name.id.name",
+				"meta.attribute.id",
+				"meta.attribute.id.name",
+				"meta.attribute.id"
+			],
+			"settings": {
+				"foreground": "#ff0000"
 			}
 		}
 	]
