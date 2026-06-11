@@ -1,9 +1,9 @@
 {
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
-    "description": "This theme uses the official Xbox palette (mostly) for Visual Studio Code.",
-    "version": "0.3.8",
-    "icon": "xbox_one.png",
+    "description": "Dark and Light Visual Studio Code themes inspired by the official Xbox palette.",
+    "version": "0.5.0",
+    "icon": "images/xbox_one.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
     "author": {
@@ -12,7 +12,7 @@
         "url": "https://github.com/hectorjjb"
     },
     "engines": {
-        "vscode": "^1.44.0"
+        "vscode": "^1.90.0"
     },
     "categories": [
         "Themes"
@@ -27,16 +27,68 @@
     },
     "keywords": [
         "vscode-theme",
-        "theme"
+        "theme",
+        "xbox",
+        "green",
+        "dark theme",
+        "light theme",
+        "color-theme"
+    ],
+    "galleryBanner": {
+        "color": "#107c10",
+        "theme": "dark"
+    },
+    "badges": [
+        {
+            "url": "https://img.shields.io/visual-studio-marketplace/v/hector-jimenez.xbox-theme.svg?label=VS%20Marketplace&color=107c10",
+            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme",
+            "description": "Visual Studio Marketplace version"
+        },
+        {
+            "url": "https://img.shields.io/visual-studio-marketplace/i/hector-jimenez.xbox-theme.svg?label=Installs&color=107c10",
+            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme",
+            "description": "Installs"
+        },
+        {
+            "url": "https://img.shields.io/visual-studio-marketplace/r/hector-jimenez.xbox-theme.svg?label=Rating&color=107c10",
+            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme&ssr=false#review-details",
+            "description": "Rating"
+        }
+    ],
+    "qna": "marketplace",
+    "sponsor": {
+        "url": "https://github.com/sponsors/hectorjjb"
+    },
+    "extensionKind": [
+        "ui",
+        "workspace"
     ],
     "preview": false,
     "homepage": "https://github.com/hectorjjb/vs-code-xbox-theme",
+    "scripts": {
+        "build": "node scripts/build-themes.mjs",
+        "validate": "node scripts/validate-themes.mjs",
+        "test": "npm run build && npm run validate",
+        "package": "vsce package",
+        "publish:vsce": "vsce publish",
+        "publish:ovsx": "ovsx publish",
+        "prepublishOnly": "npm run test"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^3.2.1",
+        "ovsx": "^0.10.1"
+    },
     "contributes": {
         "themes": [
             {
-                "label": "Xbox Dark Theme",
+                "label": "Xbox Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/xbox-dark.color-theme.json"
+            },
+            {
+                "label": "Xbox Light",
+                "uiTheme": "vs",
+                "path": "./themes/xbox-light.color-theme.json"
             }
         ]
     }

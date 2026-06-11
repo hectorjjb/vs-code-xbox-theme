@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  test:
+    name: Build + validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build themes from src/
+        run: npm run build
+
+      - name: Validate themes
+        run: npm run validate
+
+      - name: Verify built themes match committed output
+        run: |
+          if ! git diff --quiet -- themes/; then
+            echo "::error::Built themes differ from committed themes. Run 'npm run build' locally and commit the result."
+            git --no-pager diff -- themes/
+            exit 1
+          fi
+
+      - name: Dry-pack with vsce
+        run: npx --yes @vscode/vsce@latest ls

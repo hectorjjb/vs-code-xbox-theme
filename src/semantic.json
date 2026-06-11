@@ -1,0 +1,29 @@
+{
+	"_doc": "Shared semanticTokenColors block. $role tokens are substituted from src/palette.json at build time.",
+	"semanticHighlighting": true,
+	"semanticTokenColors": {
+		"*.declaration":         { "bold": true },
+		"*.deprecated":          { "strikethrough": true },
+		"class":                 { "foreground": "$greenBright", "bold": true },
+		"comment.documentation": "$fgDim",
+		"decorator":             "$purple",
+		"enum":                  "$yellow",
+		"enumMember":            "$orange",
+		"event":                 "$yellow",
+		"function":              "$greenBright",
+		"interface":             "$lightBlue",
+		"keyword":               "$red",
+		"macro":                 "$purple",
+		"method":                "$greenBright",
+		"namespace":             "$lightBlue",
+		"number":                "$purple",
+		"parameter":             "$fg",
+		"property":              "$fg",
+		"property.readonly":     "$orange",
+		"string":                "$yellow",
+		"type":                  "$lightBlue",
+		"typeParameter":         "$yellow",
+		"variable":              "$fg",
+		"variable.readonly":     "$orange"
+	}
+}

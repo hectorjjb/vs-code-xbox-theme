@@ -1,0 +1,32 @@
+# Source control
+.git/**
+.gitignore
+.gitattributes
+
+# GitHub
+.github/**
+
+# VS Code workspace
+.vscode/**
+
+# Repo planning / dev docs (not for the marketplace package)
+MODERNIZATION.md
+plan.md
+
+# Source / build tooling
+src/**
+scripts/**
+node_modules/**
+package-lock.json
+tsconfig*.json
+.eslintrc*
+.editorconfig
+.prettierrc*
+.cache/**
+
+# Legacy screenshots superseded by images/{dark,light}-*.jpeg used in README
+images/xbox-theme-*.png
+
+# Logs / misc
+*.log
+*.vsix

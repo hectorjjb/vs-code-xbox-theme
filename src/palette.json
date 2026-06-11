@@ -1,0 +1,69 @@
+{
+	"_doc": "Named color roles. Each role has a value per theme variant. Source files in src/themes/*.json reference these via $role tokens that are substituted at build time. Keep both palettes in sync (every role MUST be defined for every theme).",
+
+	"dark": {
+		"bg":           "#272822",
+		"bgAlt":        "#3b3c35",
+		"bgDeep":       "#1d1e19",
+		"bgDeeper":     "#161613",
+
+		"fg":           "#fdfff1",
+		"fgMid":        "#c0c1b5",
+		"fgDim":        "#919288",
+		"fgDimmer":     "#57584f",
+
+		"green":        "#107c10",
+		"greenHover":   "#0e6a0e",
+		"greenBright":  "#a6e22e",
+		"greenNeon":    "#9bf00b",
+
+		"red":          "#f92672",
+		"orange":       "#e3641a",
+		"orangeBright": "#fd971f",
+		"yellow":       "#ffd800",
+		"yellowSoft":   "#e6db74",
+		"blue":         "#66d9ef",
+		"blueDeep":     "#2972d1",
+		"lightBlue":    "#83e7fb",
+		"purple":       "#ae81ff",
+
+		"alphaLow":     "#fdfff10c",
+		"alphaMed":     "#fdfff126",
+		"alphaHigh":    "#fdfff140",
+		"shadow":       "#000000aa",
+		"transparent":  "#00000000"
+	},
+
+	"light": {
+		"bg":           "#ffffff",
+		"bgAlt":        "#f3f3f3",
+		"bgDeep":       "#ececec",
+		"bgDeeper":     "#dddddd",
+
+		"fg":           "#333333",
+		"fgMid":        "#4e4e4e",
+		"fgDim":        "#717171",
+		"fgDimmer":     "#a0a0a0",
+
+		"green":        "#107c10",
+		"greenHover":   "#0e6a0e",
+		"greenBright":  "#5dc21e",
+		"greenNeon":    "#388a34",
+
+		"red":          "#a31515",
+		"orange":       "#e3641a",
+		"orangeBright": "#d96f00",
+		"yellow":       "#a37b00",
+		"yellowSoft":   "#a37b00",
+		"blue":         "#0062a3",
+		"blueDeep":     "#2972d1",
+		"lightBlue":    "#0078d4",
+		"purple":       "#7c4dff",
+
+		"alphaLow":     "#0000000c",
+		"alphaMed":     "#0000001a",
+		"alphaHigh":    "#00000033",
+		"shadow":       "#a8a8a8",
+		"transparent":  "#00000000"
+	}
+}
