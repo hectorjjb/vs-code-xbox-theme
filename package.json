@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "Visual Studio Code color themes inspired by the Xbox console generations: XBOX 360, XBOX ONE, and XBOX Series X.",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",

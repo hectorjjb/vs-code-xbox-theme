@@ -4,6 +4,11 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.2] — 2026-06-10
+
+### Changed
+- Tuned terminal ANSI palette for XBOX ONE and XBOX Series X: `ansiGreen` now uses each variant's canonical Xbox green (Xbox green `#107c10` / controller lime `#7fc83a`), `ansiYellow` uses Xbox yellow (`#ffd800` / `#ffe34a`), and `ansiBrightBlue` upgraded to Xbox blue `#0078d4`. Affects generic terminal output (git, npm, ls --color); Copilot CLI emits truecolor and is unaffected.
+
 ## [0.6.1] — 2026-06-10
 
 ### Fixed
