@@ -1,9 +1,9 @@
 {
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
-    "description": "Dark and Light Visual Studio Code themes inspired by the official Xbox palette.",
-    "version": "0.5.0",
-    "icon": "images/xbox_one.png",
+    "description": "Visual Studio Code color themes inspired by the Xbox console generations: XBOX 360, XBOX ONE, and XBOX Series X.",
+    "version": "0.6.0",
+    "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
     "author": {
@@ -81,14 +81,19 @@
     "contributes": {
         "themes": [
             {
-                "label": "Xbox Dark",
+                "label": "XBOX ONE",
                 "uiTheme": "vs-dark",
-                "path": "./themes/xbox-dark.color-theme.json"
+                "path": "./themes/xbox-one.color-theme.json"
             },
             {
-                "label": "Xbox Light",
+                "label": "XBOX 360",
                 "uiTheme": "vs",
-                "path": "./themes/xbox-light.color-theme.json"
+                "path": "./themes/xbox-360.color-theme.json"
+            },
+            {
+                "label": "XBOX Series X",
+                "uiTheme": "vs-dark",
+                "path": "./themes/xbox-series-x.color-theme.json"
             }
         ]
     }

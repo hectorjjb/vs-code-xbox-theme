@@ -1,0 +1,76 @@
+/* Xbox Console Gallery — CSS sample */
+:root {
+  --xbox-green:        #107c10;
+  --xbox-green-bright: #9bf00b;
+  --xbox-lime:         #7fc83a;
+  --xbox-yellow:       #ffd800;
+  --bg-page:           #0d100a;
+  --bg-card:           #23271f;
+  --fg-default:        #f5f5e8;
+  --radius:            12px;
+  --shadow-lg:         0 8px 24px rgb(0 0 0 / 60%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-page: #ffffff;
+    --bg-card: #f3f3f3;
+    --fg-default: #1a1a1a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--fg-default);
+  font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  transition: transform 200ms ease, border-color 200ms ease;
+
+  & img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--xbox-lime);
+  }
+
+  &.is-current::after {
+    content: "Current generation";
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--xbox-yellow);
+    color: #000;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.6; }
+}
+
+.badge { animation: pulse 1.5s ease-in-out infinite; }

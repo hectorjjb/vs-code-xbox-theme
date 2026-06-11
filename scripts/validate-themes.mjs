@@ -24,8 +24,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 const FILES = [
-	"themes/xbox-dark.color-theme.json",
-	"themes/xbox-light.color-theme.json",
+	"themes/xbox-one.color-theme.json",
+	"themes/xbox-360.color-theme.json",
+	"themes/xbox-series-x.color-theme.json",
 ];
 
 const VALID_TYPES = new Set(["dark", "light", "hc-dark", "hc-light", "hc"]);
@@ -133,15 +134,15 @@ function validateParity(dark, light) {
 	const darkOnly  = [...dk].filter(k => !lk.has(k)).sort();
 	const lightOnly = [...lk].filter(k => !dk.has(k)).sort();
 	if (darkOnly.length > 0) {
-		log.error(`parity: ${darkOnly.length} key(s) present in DARK but missing from LIGHT`);
+		log.error(`parity: ${darkOnly.length} key(s) present in XBOX ONE but missing from XBOX 360`);
 		darkOnly.slice(0, 10).forEach(k => log.error(`    - ${k}`));
 	}
 	if (lightOnly.length > 0) {
-		log.warn(`parity: ${lightOnly.length} key(s) present in LIGHT but not in DARK (allowed; will be palette-mapped via Phase 4)`);
+		log.warn(`parity: ${lightOnly.length} key(s) present in XBOX 360 but not in XBOX ONE (allowed; will be palette-mapped via Phase 4)`);
 		lightOnly.slice(0, 10).forEach(k => console.log(`      - ${k}`));
 	}
 	if (darkOnly.length === 0 && lightOnly.length === 0) {
-		log.ok("parity: dark and light expose identical color key sets");
+		log.ok("parity: XBOX ONE and XBOX 360 expose identical color key sets");
 	}
 }
 

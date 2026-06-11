@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Xbox Console Catalog",
+  "version": "1.0.0",
+  "lastUpdated": "2026-06-10T21:00:00Z",
+  "consoles": [
+    {
+      "id": "xbox",
+      "name": "Xbox",
+      "generation": 1,
+      "released": "2001-11-15",
+      "launchPriceUsd": 299.99,
+      "unitsShippedMillions": 24,
+      "specs": {
+        "cpu": "Intel Pentium III 733 MHz",
+        "gpu": "NVIDIA NV2A 233 MHz",
+        "ramMb": 64,
+        "storageGb": 8
+      },
+      "features": ["broadband", "hard-drive", "ethernet"]
+    },
+    {
+      "id": "xbox-series-x",
+      "name": "Xbox Series X",
+      "generation": 4,
+      "released": "2020-11-10",
+      "launchPriceUsd": 499.99,
+      "unitsShippedMillions": 25,
+      "specs": {
+        "cpu": "AMD Zen 2 8-core @ 3.8 GHz",
+        "gpu": "AMD RDNA 2 12 TFLOPS",
+        "ramGb": 16,
+        "storageGb": 1024,
+        "raytracing": true,
+        "maxOutput": "4K 120fps"
+      },
+      "features": ["raytracing", "vrr", "quick-resume", "auto-hdr", "dolby-vision"]
+    }
+  ],
+  "metadata": {
+    "compiledBy": "hector-jimenez",
+    "sourceUrl": "https://news.xbox.com/",
+    "tags": ["xbox", "consoles", "history"],
+    "draft": false
+  }
+}

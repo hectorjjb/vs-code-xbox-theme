@@ -4,7 +4,25 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.6.0] — 2026-06-10
+
+### Added
+
+- **XBOX Series X theme** — new dark variant celebrating the Xbox 25th Anniversary, inspired by the translucent OG Xbox green hardware (2001). Neutral warm grays with a soft controller-lime accent (`#7fc83a`), dark text on every lime surface, and Xbox-yellow (`#ffd800`) activity-bar badges. Built from the same `src/themes/` source pipeline as the other variants; selectable as **XBOX Series X** in the theme picker.
+- `docs/xbox-console-generations.png` — console-generations reference image used in the README and as the long-term roadmap for the four-theme set (XBOX, XBOX 360, XBOX ONE, XBOX Series X).
+
+### Changed
+
+- Renamed contributed theme labels and underlying file artifacts to align with Xbox console generations. **Note**: file paths in `themes/` changed — users who selected the previous labels (`Xbox Dark`, `Xbox Light`) may need to reselect from the Color Theme picker after upgrading.
+  - `Xbox Dark` → **XBOX ONE** (`themes/xbox-dark.color-theme.json` → `themes/xbox-one.color-theme.json`)
+  - `Xbox Light` → **XBOX 360** (`themes/xbox-light.color-theme.json` → `themes/xbox-360.color-theme.json`)
+  - new: **XBOX Series X** (`themes/xbox-series-x.color-theme.json`)
+- Source files in `src/themes/` renamed to match: `dark.json` → `one.json`, `light.json` → `xbox360.json`, plus new `seriesX.json`. Palette variant keys in `src/palette.json` renamed correspondingly (`dark` → `one`, `light` → `xbox360`, new `seriesX`).
+- Activity-bar badges across all three themes now use Xbox-yellow (`#ffd800`) with black text for maximum legibility.
+
+### Planned
+
+- **XBOX theme** — a fourth variant inspired by the original 2001 console to complete the four-generation set.
 
 ## [0.5.0] — 2026-06-10
 

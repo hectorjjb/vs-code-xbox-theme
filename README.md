@@ -5,10 +5,15 @@
 [![Rating](https://img.shields.io/visual-studio-marketplace/r/hector-jimenez.xbox-theme.svg?label=Rating&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme&ssr=false#review-details)
 [![License](https://img.shields.io/badge/license-Apache--2.0-107c10.svg)](LICENSE)
 
-Two Visual Studio Code color themes inspired by the official Xbox palette:
+Visual Studio Code color themes inspired by the Xbox console generations:
 
-- **Xbox Dark** — the classic deep-charcoal Xbox dashboard look
-- **Xbox Light** — a clean light variant with Xbox green accents
+![Xbox console generations](images/xbox-console-generations.png)
+
+- **XBOX 360** — clean light variant with Xbox green accents (2005)
+- **XBOX ONE** — the classic deep-charcoal dashboard look (2013)
+- **XBOX Series X** — 25th Anniversary edition inspired by the translucent OG Xbox green hardware — neutral warm grays with a soft controller-lime accent
+
+> A fourth theme for the **original XBOX** (2001) is planned to complete the console generations set.
 
 ---
 
@@ -19,7 +24,7 @@ From inside VS Code:
 1. Open the Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`).
 2. Search for **Xbox Theme**.
 3. Click **Install**.
-4. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **Preferences: Color Theme** → pick **Xbox Dark** or **Xbox Light**.
+4. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **Preferences: Color Theme** → pick **XBOX 360**, **XBOX ONE**, or **XBOX Series X**.
 
 Or from the command line:
 
@@ -31,54 +36,25 @@ code --install-extension hector-jimenez.xbox-theme
 
 ## Screenshots
 
-### Xbox Dark
+Same HTML and TypeScript files rendered in each theme, in console-generation order:
 
-| TypeScript | HTML | LESS |
-|---|---|---|
-| ![Dark TypeScript](images/dark-typescript.jpeg) | ![Dark HTML](images/dark-html.jpeg) | ![Dark LESS](images/dark-less.jpeg) |
+### XBOX 360
 
-### Xbox Light
+| HTML | TypeScript |
+| --- | --- |
+| ![XBOX 360 — HTML](images/xbox-360-html.png) | ![XBOX 360 — TypeScript](images/xbox-360-ts.png) |
 
-| TypeScript | HTML | LESS |
-|---|---|---|
-| ![Light TypeScript](images/light-typescript.jpeg) | ![Light HTML](images/light-html.jpeg) | ![Light LESS](images/light-less.jpeg) |
+### XBOX ONE
 
----
+| HTML | TypeScript |
+| --- | --- |
+| ![XBOX ONE — HTML](images/xbox-one-html.png) | ![XBOX ONE — TypeScript](images/xbox-one-ts.png) |
 
-## Recommended settings
+### XBOX Series X
 
-For the best experience, enable VS Code's modern UI features that this theme is tuned for:
-
-```jsonc
-{
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.stickyScroll.enabled": true,
-  "editor.inlayHints.enabled": "onUnlessPressed",
-  "editor.semanticHighlighting.enabled": true,
-  "workbench.editor.showTabs": "multiple",
-  "workbench.tree.indent": 16
-}
-```
-
----
-
-## Palette
-
-The themes use the official Xbox palette (mostly):
-
-| Swatch | Hex | Name |
-|---|---|---|
-| 🟩 | `#107c10` | Xbox green |
-| 🟢 | `#9bf00b` | Light green |
-| ⬛ | `#171717` | Black |
-| ⬜ | `#f1f1f1` | White |
-| 🩵 | `#83e7fb` | Light blue |
-| 🟦 | `#2972d1` | Blue |
-| 🟧 | `#e3641a` | Orange |
-| 🟨 | `#ffd800` | Yellow |
-
-See [`themes/palette.css`](themes/palette.css) for the full swatch.
+| HTML | TypeScript |
+| --- | --- |
+| ![XBOX Series X — HTML](images/xbox-series-x-html.png) | ![XBOX Series X — TypeScript](images/xbox-series-x-ts.png) |
 
 ---
 

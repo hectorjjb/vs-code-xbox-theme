@@ -1,7 +1,7 @@
 {
-	"_doc": "Named color roles. Each role has a value per theme variant. Source files in src/themes/*.json reference these via $role tokens that are substituted at build time. Keep both palettes in sync (every role MUST be defined for every theme).",
+	"_doc": "Named color roles. Each role has a value per theme variant. Source files in src/themes/*.json reference these via $role tokens that are substituted at build time. Keep all palettes in sync (every role MUST be defined for every variant).",
 
-	"dark": {
+	"one": {
 		"bg":           "#272822",
 		"bgAlt":        "#3b3c35",
 		"bgDeep":       "#1d1e19",
@@ -34,7 +34,42 @@
 		"transparent":  "#00000000"
 	},
 
-	"light": {
+	"seriesX": {
+		"_doc": "XBOX Series X — themed after the Xbox 25th Anniversary celebration of the translucent OG Xbox green hardware (2001). Neutral warm grays with a soft controller-lime accent (#7fc83a). Dark text on every lime surface for legibility. Dark variant only.",
+
+		"bg":           "#23271f",
+		"bgAlt":        "#2e332a",
+		"bgDeep":       "#181b15",
+		"bgDeeper":     "#0d100a",
+
+		"fg":           "#f5f5e8",
+		"fgMid":        "#c5c8b8",
+		"fgDim":        "#8a8d7e",
+		"fgDimmer":     "#525547",
+
+		"green":        "#7fc83a",
+		"greenHover":   "#6cb02d",
+		"greenBright":  "#9fd965",
+		"greenNeon":    "#b3e882",
+
+		"red":          "#ff5577",
+		"orange":       "#ff9d2e",
+		"orangeBright": "#ffb74d",
+		"yellow":       "#ffe34a",
+		"yellowSoft":   "#e8d97a",
+		"blue":         "#7be0f0",
+		"blueDeep":     "#3aa0d8",
+		"lightBlue":    "#a8eef7",
+		"purple":       "#c89dff",
+
+		"alphaLow":     "#7fc83a1f",
+		"alphaMed":     "#7fc83a40",
+		"alphaHigh":    "#7fc83a66",
+		"shadow":       "#000000cc",
+		"transparent":  "#00000000"
+	},
+
+	"xbox360": {
 		"bg":           "#ffffff",
 		"bgAlt":        "#f3f3f3",
 		"bgDeep":       "#ececec",

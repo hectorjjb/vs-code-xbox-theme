@@ -10,8 +10,11 @@
 .vscode/**
 
 # Repo planning / dev docs (not for the marketplace package)
-MODERNIZATION.md
+docs/**
 plan.md
+
+# Sample code (only used for taking screenshots — not shipped)
+samples/**
 
 # Source / build tooling
 src/**
@@ -23,9 +26,6 @@ tsconfig*.json
 .editorconfig
 .prettierrc*
 .cache/**
-
-# Legacy screenshots superseded by images/{dark,light}-*.jpeg used in README
-images/xbox-theme-*.png
 
 # Logs / misc
 *.log

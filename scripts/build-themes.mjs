@@ -23,8 +23,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 const VARIANTS = [
-	{ key: "dark",  out: "themes/xbox-dark.color-theme.json"  },
-	{ key: "light", out: "themes/xbox-light.color-theme.json" },
+	{ key: "one",     out: "themes/xbox-one.color-theme.json"       },
+	{ key: "xbox360", out: "themes/xbox-360.color-theme.json"       },
+	{ key: "seriesX", out: "themes/xbox-series-x.color-theme.json"  },
 ];
 
 const TOKEN = /^\$([a-zA-Z][a-zA-Z0-9]*)$/;

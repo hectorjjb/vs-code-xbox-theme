@@ -1,0 +1,56 @@
+# Xbox console catalog — YAML sample
+---
+catalog: xbox-consoles
+version: 1.0.0
+updated: 2026-06-10T21:00:00Z
+
+# Shared defaults applied via merge anchors below
+defaults: &console_defaults
+  manufacturer: Microsoft
+  region: worldwide
+  warranty_months: 12
+
+consoles:
+  - <<: *console_defaults
+    id: xbox
+    name: Xbox
+    generation: 1
+    released: 2001-11-15
+    launch_price_usd: 299.99
+    units_shipped_m: 24
+    specs:
+      cpu: Intel Pentium III 733 MHz
+      gpu: NVIDIA NV2A 233 MHz
+      ram_mb: 64
+      storage_gb: 8
+    features: [broadband, hard-drive, ethernet]
+    tagline: |
+      The original. Translucent green hardware,
+      built-in hard drive, and Halo.
+
+  - <<: *console_defaults
+    id: xbox-series-x
+    name: Xbox Series X
+    generation: 4
+    released: 2020-11-10
+    launch_price_usd: 499.99
+    units_shipped_m: 25
+    specs:
+      cpu: AMD Zen 2 8-core @ 3.8 GHz
+      gpu: AMD RDNA 2 12 TFLOPS
+      ram_gb: 16
+      storage_gb: 1024
+      raytracing: true
+      max_output: 4K 120fps
+    features:
+      - raytracing
+      - vrr
+      - quick-resume
+      - auto-hdr
+      - dolby-vision
+
+metadata:
+  compiled_by: hector-jimenez
+  source_url: https://news.xbox.com/
+  tags: [xbox, consoles, history]
+  draft: false

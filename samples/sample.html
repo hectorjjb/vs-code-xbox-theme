@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xbox Console Gallery</title>
+  <link rel="stylesheet" href="sample.css">
+  <style>
+    body { font-family: "Segoe UI", system-ui, sans-serif; margin: 0; }
+    .hero { background: linear-gradient(135deg, #107c10 0%, #9bf00b 100%); padding: 4rem 2rem; color: #fff; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>25 Years of Xbox</h1>
+    <p>From the original 2001 console to the Series X Anniversary Edition.</p>
+  </header>
+
+  <main>
+    <section id="gallery" class="grid" aria-label="Console gallery">
+      <article class="card" data-gen="xbox">
+        <img src="images/xbox.png" alt="Original Xbox (2001)" loading="lazy">
+        <h2>Xbox</h2>
+        <p>Released <time datetime="2001-11-15">November 15, 2001</time></p>
+      </article>
+
+      <article class="card" data-gen="xbox-360">
+        <img src="images/xbox-360.png" alt="Xbox 360 (2005)" loading="lazy">
+        <h2>Xbox 360</h2>
+        <p>Released <time datetime="2005-11-22">November 22, 2005</time></p>
+      </article>
+
+      <article class="card is-current" data-gen="xbox-series-x">
+        <img src="images/series-x.png" alt="Xbox Series X (2020)" loading="lazy">
+        <h2>Xbox Series X</h2>
+        <p>Released <time datetime="2020-11-10">November 10, 2020</time></p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2026 — built with &lt;3 for the Xbox community.</small>
+  </footer>
+
+  <script type="module">
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        console.log(`Selected generation: ${card.dataset.gen}`);
+        card.classList.toggle("is-active");
+      });
+    });
+  </script>
+</body>
+</html>

@@ -44,7 +44,7 @@ Marketplace recommends shipping HC variants for accessibility. Trivial now that 
 The build pipeline reports light is only **~60% tokenized** vs dark's 91% — many bespoke hex values remain inline because the original light theme used VS Code default-light colors that don't fit the dark palette roles.
 
 - [ ] Expand `src/palette.json` `light` block with roles needed for currently-literal values (e.g. button hover blues, soft selection grays, focus tints)
-- [ ] Replace literal hexes in `src/themes/light.json` with `$role` tokens
+- [ ] Replace literal hexes in `src/themes/xbox360.json` with `$role` tokens
 - [ ] Target: ≥ 90% tokenized (parity with dark)
 - [ ] As part of this, audit light theme syntax colors against a real VS Code light reference (the current light is "dark theme inverted" not "designed light")
 
