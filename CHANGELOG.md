@@ -4,6 +4,11 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.3] — 2026-06-11
+
+### Changed
+- Updated the extension icon to the green Xbox sphere logo.
+
 ## [0.6.2] — 2026-06-10
 
 ### Changed
