@@ -7,7 +7,7 @@
 
 Visual Studio Code color themes inspired by the Xbox console generations:
 
-![Xbox console generations](images/xbox-console-generations.png)
+![Xbox console generations](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-console-generations.png)
 
 - **XBOX 360** — clean light variant with Xbox green accents (2005)
 - **XBOX ONE** — the classic deep-charcoal dashboard look (2013)
@@ -42,19 +42,19 @@ Same HTML and TypeScript files rendered in each theme, in console-generation ord
 
 | HTML | TypeScript |
 | --- | --- |
-| ![XBOX 360 — HTML](images/xbox-360-html.png) | ![XBOX 360 — TypeScript](images/xbox-360-ts.png) |
+| ![XBOX 360 — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-360-html.png) | ![XBOX 360 — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-360-ts.png) |
 
 ### XBOX ONE
 
 | HTML | TypeScript |
 | --- | --- |
-| ![XBOX ONE — HTML](images/xbox-one-html.png) | ![XBOX ONE — TypeScript](images/xbox-one-ts.png) |
+| ![XBOX ONE — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-one-html.png) | ![XBOX ONE — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-one-ts.png) |
 
 ### XBOX Series X
 
 | HTML | TypeScript |
 | --- | --- |
-| ![XBOX Series X — HTML](images/xbox-series-x-html.png) | ![XBOX Series X — TypeScript](images/xbox-series-x-ts.png) |
+| ![XBOX Series X — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-series-x-html.png) | ![XBOX Series X — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/develop/images/xbox-series-x-ts.png) |
 
 ---
 
