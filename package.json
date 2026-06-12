@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "Visual Studio Code color themes inspired by every Xbox console generation (Original, 360, ONE, Series X) plus High Contrast Dark & Light editions.",
-    "version": "0.8.1",
+    "version": "0.8.2",
     "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
@@ -47,6 +47,7 @@
     "scripts": {
         "build": "node scripts/build-themes.mjs",
         "build:icons": "node scripts/build-icon-theme.mjs",
+        "screenshots": "node scripts/screenshots.mjs",
         "validate": "node scripts/validate-themes.mjs",
         "test": "npm run build && npm run validate",
         "package": "vsce package",
@@ -56,7 +57,9 @@
     },
     "devDependencies": {
         "@vscode/vsce": "^3.2.1",
-        "ovsx": "^1.0.1"
+        "ovsx": "^1.0.1",
+        "playwright": "^1.60.0",
+        "shiki": "^1.29.2"
     },
     "contributes": {
         "themes": [

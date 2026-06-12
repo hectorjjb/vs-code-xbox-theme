@@ -4,6 +4,19 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.2] — 2026-06-12
+
+### Changed
+
+- **Light theme (XBOX 360) rebrand** — accent, selection, and interaction colors shifted from Microsoft-blue to Xbox green: editor selection, active line number, progress bar, menu/list selection, match highlights, fold/hover/drop/peek/snippet tints, button hover, and the notebook/settings change indicators. Semantic colors are intentionally preserved — info-blue, git status, the bracket/syntax rainbow, and terminal ANSI blue/cyan.
+- **XBOX High Contrast Light** — focus/hover and modified-item indicators nudged to green to match the rebrand.
+- README screenshots are now generated deterministically, and each theme includes a collapsible **color palette** sheet.
+
+### Internal
+
+- Light theme (`xbox360`) palette fully tokenized (100% `$role` tokens, byte-identical output), completing the tokenization effort started on the dark themes.
+- New `scripts/screenshots.mjs` generator (Playwright + Shiki) renders the committed README assets in `images/`; `playwright`/`shiki` added as devDependencies (not shipped in the VSIX).
+
 ## [0.8.1] — 2026-06-11
 
 ### Changed

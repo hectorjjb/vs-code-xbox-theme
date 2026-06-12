@@ -95,31 +95,69 @@ it per-workspace via `.vscode/settings.json`:
 
 ## Screenshots
 
-Each theme rendered on the same source file, in console-generation order:
+Each theme rendered on the same source file, in console-generation order. Every
+shot is produced deterministically by `npm run screenshots`, and each theme ships
+a full color-palette sheet so you can preview the entire token set at a glance.
 
 ### XBOX (Original 2001)
 
 ![XBOX (Original 2001)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-original.png)
 
+<details><summary>Color palette</summary>
+
+![XBOX (Original 2001) palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-original-palette.png)
+
+</details>
+
 ### XBOX 360 (2005)
 
 ![XBOX 360 (2005)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-360.png)
+
+<details><summary>Color palette</summary>
+
+![XBOX 360 (2005) palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-360-palette.png)
+
+</details>
 
 ### XBOX ONE (2013)
 
 ![XBOX ONE (2013)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-one.png)
 
+<details><summary>Color palette</summary>
+
+![XBOX ONE (2013) palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-one-palette.png)
+
+</details>
+
 ### XBOX Series X (2020)
 
 ![XBOX Series X (2020)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-series-x.png)
+
+<details><summary>Color palette</summary>
+
+![XBOX Series X (2020) palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-series-x-palette.png)
+
+</details>
 
 ### XBOX High Contrast Dark
 
 ![XBOX High Contrast Dark](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-dark.png)
 
+<details><summary>Color palette</summary>
+
+![XBOX High Contrast Dark palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-dark-palette.png)
+
+</details>
+
 ### XBOX High Contrast Light
 
 ![XBOX High Contrast Light](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-light.png)
+
+<details><summary>Color palette</summary>
+
+![XBOX High Contrast Light palette](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-light-palette.png)
+
+</details>
 
 ---
 

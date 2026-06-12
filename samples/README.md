@@ -2,7 +2,8 @@
 
 Short, syntactically rich code samples used to capture marketplace screenshots
 across all six Xbox themes (XBOX Original, XBOX 360, XBOX ONE, XBOX Series X,
-plus High Contrast Dark & Light).
+plus High Contrast Dark & Light). `sample.ts` also feeds the deterministic
+preview generator (`npm run screenshots`, see `scripts/screenshots.mjs`).
 
 Each file is intentionally small (≈40–80 lines) and exercises a representative
 mix of keywords, strings, numbers, comments, types, decorators, and operators

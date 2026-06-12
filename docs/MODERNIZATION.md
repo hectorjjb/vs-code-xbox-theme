@@ -52,14 +52,27 @@ A bundled **XBOX Icons** file icon theme pairs with the color themes.
 
 ---
 
+## 1.6 Theme preview generator — ✅ added (unreleased)
+
+A deterministic screenshot generator renders every variant + an icon
+before/after for quick visual review (e.g. after a palette change).
+
+- [x] `scripts/screenshots.mjs` + `npm run screenshots` — headless Chromium (Playwright) renders a realistic VS Code workbench mock (activity bar + badge, explorer with file icons, tabs, breadcrumbs, active-line highlight, minimap, panel, full status bar), with chrome colored straight from each built `themes/*.json` `colors` map and code highlighted by Shiki (which consumes the theme JSON natively)
+- [x] Also emits a **palette swatch sheet** per variant (`images/<theme>-palette.png`) showing every named `src/palette.json` role as a chip + hex (alpha shown over a checkerboard), so the full color configuration is reviewable at a glance — surfaced in the README under a collapsible per theme
+- [x] Outputs fixed-size PNGs straight into `images/` using the README naming (`xbox-360.png`, `xbox-360-palette.png`, `icons-before/after.png`; 1240×780 logical @2× workbench; full-width palette sheet; 340×520 icon before/after using the bundled `fileicons/` SVGs) — identical framing/sizing every run, unlike the old manual captures, and consumed directly by `README.md`
+- [x] `images/*.png` are VSIX-excluded (only `xbox-logo.png` ships, since README embeds via raw.githubusercontent URLs); `playwright`/`shiki` are devDependencies only (not shipped)
+- [ ] Optional: run in CI to verify the committed `images/` are regenerable and in sync. Note these are a reproducible *mock*, not pixel-identical to a real VS Code capture.
+
+---
+
 ## 2. Light theme palette overhaul
 
-The build pipeline reports light is only **~60% tokenized** vs dark's 91% — many bespoke hex values remain inline because the original light theme used VS Code default-light colors that don't fit the dark palette roles.
+The original light theme used VS Code default-light colors that don't fit the dark palette roles, so it carried ~263 bespoke inline hexes (~64% tokenized vs dark's 91%).
 
-- [ ] Expand `src/palette.json` `light` block with roles needed for currently-literal values (e.g. button hover blues, soft selection grays, focus tints)
-- [ ] Replace literal hexes in `src/themes/xbox360.json` with `$role` tokens
-- [ ] Target: ≥ 90% tokenized (parity with dark)
-- [ ] As part of this, audit light theme syntax colors against a real VS Code light reference (the current light is "dark theme inverted" not "designed light")
+- [x] Expand `src/palette.json` `xbox360` block with roles for every currently-literal value (neutrals/borders, diagnostics, git/diff, merge, terminal ANSI, symbol icons, selection/hover tints). Mirrored into the `hcLight` block, which inherits xbox360 via `extends`.
+- [x] Replace literal hexes in `src/themes/xbox360.json` with `$role` tokens — **263 keys tokenized**.
+- [x] Target reached: **xbox360 and hcLight are now 100% tokenized** (0 literals). This was a pure, byte-identical refactor — each new role holds the exact original hex, so built `themes/*.json` are unchanged.
+- [ ] Future (visual): audit light theme syntax/chrome colors against a real VS Code light reference (the current light is "dark theme inverted" not "designed light"); the new named roles make a rebrand a palette-only edit.
 
 ---
 

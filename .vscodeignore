@@ -16,6 +16,9 @@ plan.md
 # Sample code (only used for taking screenshots — not shipped)
 samples/**
 
+# Generated theme previews (regenerable via `npm run screenshots`) — not shipped
+previews/**
+
 # Marketplace screenshots are embedded in the README via raw.githubusercontent URLs,
 # so they don't need to ship inside the .vsix. Keep only the extension icon.
 images/*.png
