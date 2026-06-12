@@ -71,6 +71,12 @@ To enable it:
 2. Run **Preferences: File Icon Theme**.
 3. Pick **XBOX Icons**.
 
+Before and after enabling **XBOX Icons** in the Explorer:
+
+| Before (default icons) | After (XBOX Icons) |
+|---|---|
+| ![Explorer with default icons](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-before.png) | ![Explorer with XBOX Icons](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-after.png) |
+
 The icon theme is independent of the color theme — you can mix it with any
 color theme (or switch back to your previous icons) at any time. Teams can pin
 it per-workspace via `.vscode/settings.json`:
