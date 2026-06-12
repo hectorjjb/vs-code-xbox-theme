@@ -87,8 +87,8 @@ one per-workspace via `.vscode/settings.json`:
 
 ```jsonc
 {
-  // "xbox-icons" (colorful) or "xbox-icons-green"
-  "workbench.iconTheme": "xbox-icons"
+  // "xbox-icons-colorful" (colorful) or "xbox-icons-green"
+  "workbench.iconTheme": "xbox-icons-colorful"
 }
 ```
 

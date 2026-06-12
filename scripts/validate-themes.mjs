@@ -27,7 +27,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
 const ICON_THEMES = [
-	"fileicons/xbox-icon-theme.json",
+	"fileicons/xbox-icon-theme-colorful.json",
 	"fileicons/xbox-icon-theme-green.json",
 ];
 

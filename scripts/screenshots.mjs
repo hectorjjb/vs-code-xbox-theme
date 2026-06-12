@@ -36,7 +36,7 @@ import { VARIANTS } from "./variants.mjs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT_DIR = resolve(ROOT, "images");
-const ICON_THEME = resolve(ROOT, "fileicons/xbox-icon-theme.json");
+const ICON_THEME = resolve(ROOT, "fileicons/xbox-icon-theme-colorful.json");
 const GREEN_ICON_THEME = resolve(ROOT, "fileicons/xbox-icon-theme-green.json");
 const SCALE = 2;
 

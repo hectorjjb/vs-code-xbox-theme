@@ -4,6 +4,16 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1] — 2026-06-12
+
+### Changed
+
+- **Renamed the colorful file icon theme id** from `xbox-icons` to `xbox-icons-colorful` so both icon themes follow a consistent `xbox-icons-<variant>` scheme. If you previously set `"workbench.iconTheme": "xbox-icons"`, update it to `"xbox-icons-colorful"` (the picker label **XBOX Icons Colorful** is unchanged).
+
+### Internal
+
+- Renamed the colorful theme manifest `fileicons/xbox-icon-theme.json` → `fileicons/xbox-icon-theme-colorful.json` to mirror `xbox-icon-theme-green.json`; updated the build, validation, and screenshot scripts accordingly.
+
 ## [0.9.0] — 2026-06-12
 
 ### Added

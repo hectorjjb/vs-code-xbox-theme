@@ -15,7 +15,7 @@
  *   4) Reads vscode-icons' generated icon-theme JSON, rewrites each `iconPath`
  *      from `../../icons/` to `./icons/colorful/`, and backfills the empty
  *      light-default slots with their dark equivalents so light/HC themes still
- *      get icons. Writes fileicons/xbox-icon-theme.json.
+ *      get icons. Writes fileicons/xbox-icon-theme-colorful.json.
  *   5) Greenifies every SVG into fileicons/icons/green/ and writes the derived
  *      fileicons/xbox-icon-theme-green.json (same map, paths re-pointed).
  *
@@ -47,7 +47,7 @@ const DEFAULT_VERSION = "12.18.0";
 
 const ICONS_OUT = resolve(ROOT, "fileicons/icons/colorful");
 const GREEN_OUT = resolve(ROOT, "fileicons/icons/green");
-const THEME_OUT = resolve(ROOT, "fileicons/xbox-icon-theme.json");
+const THEME_OUT = resolve(ROOT, "fileicons/xbox-icon-theme-colorful.json");
 const GREEN_THEME_OUT = resolve(ROOT, "fileicons/xbox-icon-theme-green.json");
 const ICON_PATH_PREFIX = "../../icons/";
 const COLORFUL_DIR = "./icons/colorful/";
@@ -157,7 +157,7 @@ async function main() {
 
 		verifyPaths(theme, "colorful");
 		writeFileSync(THEME_OUT, JSON.stringify(theme, null, 2) + "\n", "utf8");
-		console.log(`wrote fileicons/xbox-icon-theme.json (${Object.keys(theme.iconDefinitions).length} icon definitions)`);
+		console.log(`wrote fileicons/xbox-icon-theme-colorful.json (${Object.keys(theme.iconDefinitions).length} icon definitions)`);
 
 		// Derive the Xbox-green duotone set + theme from the colorful one.
 		buildGreen(theme, svgs);
