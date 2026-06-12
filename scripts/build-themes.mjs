@@ -21,18 +21,10 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { VARIANTS } from "./variants.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
-
-const VARIANTS = [
-	{ key: "one",     out: "themes/xbox-one.color-theme.json"       },
-	{ key: "xbox360", out: "themes/xbox-360.color-theme.json"       },
-	{ key: "seriesX", out: "themes/xbox-series-x.color-theme.json"  },
-	{ key: "ogXbox",  out: "themes/xbox-original.color-theme.json"  },
-	{ key: "hcDark",  out: "themes/xbox-hc-dark.color-theme.json"   },
-	{ key: "hcLight", out: "themes/xbox-hc-light.color-theme.json"  },
-];
 
 const TOKEN = /^\$([a-zA-Z][a-zA-Z0-9]*)$/;
 

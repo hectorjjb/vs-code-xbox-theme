@@ -38,35 +38,15 @@
         "color": "#107c10",
         "theme": "dark"
     },
-    "badges": [
-        {
-            "url": "https://img.shields.io/visual-studio-marketplace/v/hector-jimenez.xbox-theme.svg?label=VS%20Marketplace&color=107c10",
-            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme",
-            "description": "Visual Studio Marketplace version"
-        },
-        {
-            "url": "https://img.shields.io/visual-studio-marketplace/i/hector-jimenez.xbox-theme.svg?label=Installs&color=107c10",
-            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme",
-            "description": "Installs"
-        },
-        {
-            "url": "https://img.shields.io/visual-studio-marketplace/r/hector-jimenez.xbox-theme.svg?label=Rating&color=107c10",
-            "href": "https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme&ssr=false#review-details",
-            "description": "Rating"
-        }
-    ],
     "qna": "marketplace",
     "sponsor": {
         "url": "https://github.com/sponsors/hectorjjb"
     },
-    "extensionKind": [
-        "ui",
-        "workspace"
-    ],
     "preview": false,
     "homepage": "https://github.com/hectorjjb/vs-code-xbox-theme",
     "scripts": {
         "build": "node scripts/build-themes.mjs",
+        "build:icons": "node scripts/build-icon-theme.mjs",
         "validate": "node scripts/validate-themes.mjs",
         "test": "npm run build && npm run validate",
         "package": "vsce package",

@@ -12,25 +12,23 @@
  *   3) All hex color values are well-formed (#rgb, #rrggbb, #rrggbbaa).
  *   4) Dark and light have the same `colors` key set (parity).
  *   5) No duplicate scopes across or within tokenColors rules.
+ *   6) The file icon theme parses, every iconPath resolves to a real SVG, and
+ *      every icon reference points at a defined iconDefinition.
  *
  * Exit code: 0 on success, 1 on a real error.
  */
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { VARIANTS } from "./variants.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
-const FILES = [
-	"themes/xbox-one.color-theme.json",
-	"themes/xbox-360.color-theme.json",
-	"themes/xbox-series-x.color-theme.json",
-	"themes/xbox-original.color-theme.json",
-	"themes/xbox-hc-dark.color-theme.json",
-	"themes/xbox-hc-light.color-theme.json",
-];
+const ICON_THEME = "fileicons/xbox-icon-theme.json";
+
+const FILES = VARIANTS.map(v => v.out);
 
 const VALID_TYPES = new Set(["dark", "light", "hc-dark", "hc-light", "hc"]);
 const HEX_RE = /^#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
@@ -141,12 +139,69 @@ function validateParity(dark, light) {
 		darkOnly.slice(0, 10).forEach(k => log.error(`    - ${k}`));
 	}
 	if (lightOnly.length > 0) {
-		log.warn(`parity: ${lightOnly.length} key(s) present in XBOX 360 but not in XBOX ONE (allowed; will be palette-mapped via Phase 4)`);
+		log.warn(`parity: ${lightOnly.length} key(s) present in XBOX 360 but not in XBOX ONE (allowed; light-only keys are palette-mapped)`);
 		lightOnly.slice(0, 10).forEach(k => console.log(`      - ${k}`));
 	}
 	if (darkOnly.length === 0 && lightOnly.length === 0) {
 		log.ok("parity: XBOX ONE and XBOX 360 expose identical color key sets");
 	}
+}
+
+function validateIconTheme(rel) {
+	console.log(rel);
+	let theme;
+	try {
+		theme = loadStrict(rel);
+		log.ok("strict JSON.parse succeeded");
+	} catch (e) {
+		log.error(`strict JSON.parse failed: ${e.message}`);
+		return;
+	}
+
+	const defs = theme.iconDefinitions;
+	if (typeof defs !== "object" || defs === null || Array.isArray(defs)) {
+		log.error(`${rel}: "iconDefinitions" must be an object`);
+		return;
+	}
+
+	// Every iconDefinition's iconPath must resolve to a real file.
+	const base = dirname(resolve(ROOT, rel));
+	let missing = 0;
+	for (const [id, def] of Object.entries(defs)) {
+		const p = def && def.iconPath;
+		if (typeof p !== "string" || p.length === 0) {
+			log.error(`${rel}: iconDefinitions.${id} has no iconPath`);
+			continue;
+		}
+		if (!existsSync(resolve(base, p))) {
+			log.error(`${rel}: iconDefinitions.${id} -> ${p} (file not found)`);
+			missing++;
+		}
+	}
+	if (missing === 0) log.ok(`${rel}: all ${Object.keys(defs).length} icon files resolve`);
+
+	// Every icon reference (file/folder + the mapping tables, incl. the light
+	// override block) must point at a defined iconDefinition id.
+	const refKeys = ["file", "folder", "folderExpanded", "rootFolder", "rootFolderExpanded"];
+	const refMaps = ["folderNames", "folderNamesExpanded", "fileExtensions", "fileNames", "languageIds"];
+	let dangling = 0;
+	const checkRef = (id, where) => {
+		if (id != null && !(id in defs)) {
+			log.error(`${rel}: ${where} references undefined iconDefinition "${id}"`);
+			dangling++;
+		}
+	};
+	const checkScope = (scope) => {
+		for (const k of refKeys) checkRef(scope[k], k);
+		for (const m of refMaps) {
+			for (const [name, id] of Object.entries(scope[m] ?? {})) checkRef(id, `${m}.${name}`);
+		}
+	};
+	checkScope(theme);
+	if (theme.light) checkScope(theme.light);
+	if (theme.highContrast) checkScope(theme.highContrast);
+	if (dangling === 0) log.ok(`${rel}: all icon references resolve to defined icons`);
+	console.log("");
 }
 
 function main() {
@@ -166,6 +221,8 @@ function main() {
 		validateNoDuplicateScopes(themes[f], f);
 		console.log("");
 	}
+
+	validateIconTheme(ICON_THEME);
 
 	console.log("parity");
 	if (themes[FILES[0]] && themes[FILES[1]]) {

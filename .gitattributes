@@ -1,0 +1,11 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Vendored third-party assets — exclude from GitHub language stats
+fileicons/icons/** linguist-vendored
+
+# Generated build output — exclude from language stats and collapse in diffs
+themes/*.color-theme.json linguist-generated
+
+# Treat SVGs as binary for diff purposes (avoid noisy diffs)
+*.svg -text

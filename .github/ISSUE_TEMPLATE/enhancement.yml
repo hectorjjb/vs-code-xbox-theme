@@ -1,0 +1,22 @@
+name: Enhancement / feature request
+description: Suggest a new theme, an icon improvement, or a coloring tweak.
+title: "[Enhancement]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+      description: Describe the new theme, icon, or change you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why?
+      description: What problem does it solve, or what would it improve?
+  - type: textarea
+    id: references
+    attributes:
+      label: References / mockups
+      description: Links, screenshots, or color values that illustrate the idea (optional).

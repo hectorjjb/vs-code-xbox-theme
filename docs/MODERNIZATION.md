@@ -6,9 +6,9 @@
 
 ---
 
-## 1. Phase 4 — Publish & accessibility
+## 1. Phase 4 — Publish automation
 
-The build pipeline (`npm run build` / `validate` / `test`) and CI workflow (`.github/workflows/ci.yml`) are in place, but publishing is still manual.
+The build pipeline (`npm run build` / `validate` / `test`) and CI workflow (`.github/workflows/ci.yml`) are in place, and the High-Contrast accessibility variants shipped in v0.7.0 (see §1.1). Publishing is still manual.
 
 ### 1.1 High-Contrast variants — ✅ done (v0.7.0)
 
@@ -47,6 +47,7 @@ A bundled **XBOX Icons** file icon theme pairs with the color themes.
 - [x] `fileicons/xbox-icon-theme.json` — full mapping (1,336 icon definitions) derived from vscode-icons' generated theme, with `iconPath` rewritten to `./icons/` and empty light-default slots backfilled
 - [x] Registered in `package.json` `contributes.iconThemes` (id `xbox-icons`, label `XBOX Icons`)
 - [x] MIT attribution in `THIRD-PARTY-NOTICES.md` + README
+- [x] Reproducible re-vendoring via `npm run build:icons` (`scripts/build-icon-theme.mjs`) — downloads the pinned vscode-icons version, rewrites paths, backfills light defaults; output is byte-identical and validated by `npm run validate`
 - [ ] Ship in a future release (CHANGELOG + version bump + publish) — note the VSIX grows ~8 MB from the bundled SVGs
 
 ---

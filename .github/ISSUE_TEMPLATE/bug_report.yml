@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a coloring problem, a hard-to-read element, or anything that looks off.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the Xbox Theme! Please include a screenshot — it makes coloring issues far easier to diagnose.
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Which theme?
+      options:
+        - XBOX (Original 2001)
+        - XBOX 360 (2005)
+        - XBOX ONE (2013)
+        - XBOX Series X (2020)
+        - XBOX High Contrast Dark
+        - XBOX High Contrast Light
+        - XBOX Icons (file icon theme)
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What's wrong?
+      description: Describe the element that isn't colored well (or at all), and what you'd expect.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag and drop a screenshot showing the issue.
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Language / file type
+      description: The language or file extension where you see the issue (e.g. TypeScript, .rs, Markdown).
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      description: Help → About (e.g. 1.95.0).
+    validations:
+      required: true
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: The Xbox Theme version (e.g. 0.8.1).

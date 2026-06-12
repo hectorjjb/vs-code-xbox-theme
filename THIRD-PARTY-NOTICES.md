@@ -8,6 +8,7 @@ The SVG icons under `fileicons/icons/` are sourced from the **vscode-icons**
 project and are used under the MIT License.
 
 - Project: https://github.com/vscode-icons/vscode-icons
+- Vendored version: **v12.18.0**
 - Copyright (c) 2016 Roberto Huertas
 
 ```

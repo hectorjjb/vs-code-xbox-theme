@@ -1,5 +1,5 @@
 {
-    "workbench.colorCustomizations": {
-
-    }
+    "editor.semanticHighlighting.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
 }
