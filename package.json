@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "Visual Studio Code color themes inspired by the Xbox console generations: XBOX 360, XBOX ONE, and XBOX Series X.",
-    "version": "0.6.3",
+    "version": "0.7.0",
     "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
@@ -81,19 +81,34 @@
     "contributes": {
         "themes": [
             {
-                "label": "XBOX ONE",
+                "label": "XBOX (Original 2001)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/xbox-original.color-theme.json"
+            },
+            {
+                "label": "XBOX ONE (2013)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/xbox-one.color-theme.json"
             },
             {
-                "label": "XBOX 360",
+                "label": "XBOX 360 (2005)",
                 "uiTheme": "vs",
                 "path": "./themes/xbox-360.color-theme.json"
             },
             {
-                "label": "XBOX Series X",
+                "label": "XBOX Series X (2020)",
                 "uiTheme": "vs-dark",
                 "path": "./themes/xbox-series-x.color-theme.json"
+            },
+            {
+                "label": "XBOX High Contrast Dark",
+                "uiTheme": "hc-black",
+                "path": "./themes/xbox-hc-dark.color-theme.json"
+            },
+            {
+                "label": "XBOX High Contrast Light",
+                "uiTheme": "hc-light",
+                "path": "./themes/xbox-hc-light.color-theme.json"
             }
         ]
     }

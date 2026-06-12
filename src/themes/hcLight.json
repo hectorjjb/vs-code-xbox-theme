@@ -1,0 +1,31 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"type": "hc-light",
+	"extends": "xbox360",
+	"colors": {
+		"contrastBorder": "$green",
+		"contrastActiveBorder": "$blue",
+		"focusBorder": "$blue",
+		"editor.background": "$bg",
+		"editor.foreground": "$fg",
+		"foreground": "$fg",
+		"widget.border": "$fg",
+		"selection.background": "$alphaHigh",
+		"editor.selectionBackground": "$alphaHigh",
+		"editor.lineHighlightBorder": "$alphaMed",
+		"editorWidget.border": "$fg",
+		"input.border": "$fg",
+		"dropdown.border": "$fg",
+		"button.border": "$fg",
+		"button.background": "$green",
+		"button.foreground": "$bg",
+		"badge.background": "$green",
+		"badge.foreground": "$bg",
+		"activityBarBadge.background": "$green",
+		"activityBarBadge.foreground": "$bg",
+		"icon.foreground": "$fg",
+		"statusBar.background": "$bg",
+		"statusBar.border": "$fg",
+		"statusBar.foreground": "$fg"
+	}
+}

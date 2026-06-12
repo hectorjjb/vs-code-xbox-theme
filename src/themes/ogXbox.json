@@ -1,0 +1,32 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"type": "dark",
+	"extends": "one",
+	"colors": {
+		"editor.background": "$bg",
+		"activityBar.background": "$bgDeep",
+		"sideBar.background": "$bgAlt",
+		"titleBar.activeBackground": "$bgDeeper",
+		"statusBar.background": "$bgDeeper",
+		"statusBar.foreground": "$green",
+		"activityBarBadge.background": "$green",
+		"activityBarBadge.foreground": "$bgDeeper",
+		"badge.background": "$green",
+		"badge.foreground": "$bgDeeper",
+		"button.background": "$green",
+		"button.foreground": "$bgDeeper",
+		"button.hoverBackground": "$greenHover",
+		"focusBorder": "$green",
+		"progressBar.background": "$greenNeon",
+		"icon.foreground": "$greenBright",
+		"chat.avatarForeground": "$bgDeeper",
+		"chat.slashCommandForeground": "$bgDeeper",
+		"debugView.stateLabelForeground": "$bgDeeper",
+		"profileBadge.foreground": "$bgDeeper",
+		"quickInputList.focusForeground": "$bgDeeper",
+		"statusBar.noFolderForeground": "$bgDeeper",
+		"inlineEdit.gutterIndicator.primaryForeground": "$bgDeeper",
+		"inlineEdit.gutterIndicator.successfulForeground": "$bgDeeper",
+		"list.focusHighlightForeground": "$bgDeeper"
+	}
+}

@@ -1,19 +1,26 @@
 # Xbox Theme for VS Code
 
-[![Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/hector-jimenez.xbox-theme.svg?label=VS%20Marketplace&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/hector-jimenez.xbox-theme.svg?label=Installs&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
-[![Rating](https://img.shields.io/visual-studio-marketplace/r/hector-jimenez.xbox-theme.svg?label=Rating&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme&ssr=false#review-details)
+[![Marketplace Version](https://vsmarketplacebadges.dev/version-short/hector-jimenez.xbox-theme.svg?label=VS%20Marketplace&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/hector-jimenez.xbox-theme.svg?label=Installs&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
+[![Rating](https://vsmarketplacebadges.dev/rating-star/hector-jimenez.xbox-theme.svg?label=Rating&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme&ssr=false#review-details)
+[![GitHub stars](https://img.shields.io/github/stars/hectorjjb/vs-code-xbox-theme?color=107c10&logo=github)](https://github.com/hectorjjb/vs-code-xbox-theme/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-107c10.svg)](LICENSE)
 
 Visual Studio Code color themes inspired by the Xbox console generations:
 
 ![Xbox console generations](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-console-generations.png)
 
-- **XBOX 360** — clean light variant with Xbox green accents (2005)
-- **XBOX ONE** — the classic deep-charcoal dashboard look (2013)
-- **XBOX Series X** — 25th Anniversary edition inspired by the translucent OG Xbox green hardware — neutral warm grays with a soft controller-lime accent
+**Console editions** (chronological):
 
-> A fourth theme for the **original XBOX** (2001) is planned to complete the console generations set.
+- **XBOX (Original 2001)** — dark theme inspired by the matte-black original console and its translucent neon-green "jewel" logo (`#9bf00b`).
+- **XBOX 360 (2005)** — clean light variant with Xbox green accents.
+- **XBOX ONE (2013)** — the classic deep-charcoal dashboard look.
+- **XBOX Series X (2020)** — 25th Anniversary edition inspired by the translucent OG Xbox green hardware — neutral warm grays with a soft controller-lime accent.
+
+**High-contrast editions** (accessibility):
+
+- **XBOX High Contrast Dark** — pure-black background with white text, bright contrast borders, and an accessible green accent (`#2ecc40`, ~9.8:1 contrast).
+- **XBOX High Contrast Light** — pure-white background with black text and strong dark-green/blue contrast borders.
 
 ---
 
@@ -24,7 +31,7 @@ From inside VS Code:
 1. Open the Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`).
 2. Search for **Xbox Theme**.
 3. Click **Install**.
-4. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **Preferences: Color Theme** → pick **XBOX 360**, **XBOX ONE**, or **XBOX Series X**.
+4. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **Preferences: Color Theme** → pick any **XBOX** theme (console editions or High Contrast).
 
 Or from the command line:
 
@@ -34,27 +41,49 @@ code --install-extension hector-jimenez.xbox-theme
 
 ---
 
+## Recommended settings
+
+These themes are tuned for VS Code's semantic highlighting and bracket-pair colorization (the palette defines all six bracket levels and a full `semanticTokenColors` map). For the intended look, add to your `settings.json`:
+
+```jsonc
+{
+  // Language-server-aware token colors (functions, types, parameters, etc.)
+  "editor.semanticHighlighting.enabled": true,
+  // Colorized matching brackets + active-pair guide
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active"
+}
+```
+
+---
+
 ## Screenshots
 
-Same HTML and TypeScript files rendered in each theme, in console-generation order:
+Each theme rendered on the same source file, in console-generation order:
 
-### XBOX 360
+### XBOX (Original 2001)
 
-| HTML | TypeScript |
-| --- | --- |
-| ![XBOX 360 — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-360-html.png) | ![XBOX 360 — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-360-ts.png) |
+![XBOX (Original 2001)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-original.png)
 
-### XBOX ONE
+### XBOX 360 (2005)
 
-| HTML | TypeScript |
-| --- | --- |
-| ![XBOX ONE — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-one-html.png) | ![XBOX ONE — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-one-ts.png) |
+![XBOX 360 (2005)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-360.png)
 
-### XBOX Series X
+### XBOX ONE (2013)
 
-| HTML | TypeScript |
-| --- | --- |
-| ![XBOX Series X — HTML](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-series-x-html.png) | ![XBOX Series X — TypeScript](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-series-x-ts.png) |
+![XBOX ONE (2013)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-one.png)
+
+### XBOX Series X (2020)
+
+![XBOX Series X (2020)](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-series-x.png)
+
+### XBOX High Contrast Dark
+
+![XBOX High Contrast Dark](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-dark.png)
+
+### XBOX High Contrast Light
+
+![XBOX High Contrast Light](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-hc-light.png)
 
 ---
 

@@ -27,6 +27,9 @@ const FILES = [
 	"themes/xbox-one.color-theme.json",
 	"themes/xbox-360.color-theme.json",
 	"themes/xbox-series-x.color-theme.json",
+	"themes/xbox-original.color-theme.json",
+	"themes/xbox-hc-dark.color-theme.json",
+	"themes/xbox-hc-light.color-theme.json",
 ];
 
 const VALID_TYPES = new Set(["dark", "light", "hc-dark", "hc-light", "hc"]);

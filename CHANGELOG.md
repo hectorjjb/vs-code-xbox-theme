@@ -4,6 +4,27 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] — 2026-06-11
+
+### Added
+
+- **XBOX (Original 2001) theme** — a dark variant inspired by the matte-black original console and its translucent neon-green "jewel" logo (`#9bf00b`), completing the four-generation console set.
+- **XBOX High Contrast Dark** and **XBOX High Contrast Light** themes — accessibility-focused variants with pure black/white backgrounds, contrast borders (`contrastBorder` / `contrastActiveBorder`), and an accessible green accent (`#2ecc40`, ~9.8:1 contrast both ways).
+- Build pipeline now supports an `extends` field in `src/themes/*.json`, so derived variants are thin override files instead of full duplicates.
+- Generated `name` fields on every `tokenColors` rule (derived from scope), so the shipped theme files are self-documenting.
+- Theme labels now include console release years (e.g. **XBOX 360 (2005)**, **XBOX ONE (2013)**, **XBOX Series X (2020)**).
+
+### Changed
+
+- README now showcases all six themes with a full screenshot each, in console-generation order.
+- Replaced the retired shields.io `visual-studio-marketplace` badges (version/installs/rating) with `vsmarketplacebadges.dev` equivalents, and added a GitHub stars badge.
+- Slimmed the published `.vsix` by excluding screenshot images (only the extension icon ships).
+
+### Fixed
+
+- Color-key parity between the light and dark base themes.
+- Accessibility: forced dark text on every green background (buttons, badges, picker selection, status bar, chat avatars, etc.) and fixed the fuzzy-match bold-highlight contrast on focused rows across all themes (now WCAG AA/AAA). Toned down the high-contrast lime from `#3ff23f` to `#2ecc40`.
+
 ## [0.6.3] — 2026-06-11
 
 ### Changed

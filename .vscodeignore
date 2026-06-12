@@ -16,6 +16,11 @@ plan.md
 # Sample code (only used for taking screenshots — not shipped)
 samples/**
 
+# Marketplace screenshots are embedded in the README via raw.githubusercontent URLs,
+# so they don't need to ship inside the .vsix. Keep only the extension icon.
+images/*.png
+!images/xbox-logo.png
+
 # Source / build tooling
 src/**
 scripts/**

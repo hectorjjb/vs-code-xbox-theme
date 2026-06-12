@@ -100,5 +100,110 @@
 		"alphaHigh":    "#00000033",
 		"shadow":       "#a8a8a8",
 		"transparent":  "#00000000"
+	},
+
+	"ogXbox": {
+		"_doc": "Original XBOX (2001) — matte-black hardware with the translucent neon-green 'jewel' logo. Near-black backgrounds, greenish-white text, signature OG neon green (#9bf00b). Dark variant only. Extends the XBOX ONE structure; the palette does the recoloring.",
+
+		"bg":           "#0a0f0a",
+		"bgAlt":        "#121a12",
+		"bgDeep":       "#060906",
+		"bgDeeper":     "#000000",
+
+		"fg":           "#d7f7c8",
+		"fgMid":        "#9bc78a",
+		"fgDim":        "#6f8a63",
+		"fgDimmer":     "#41513a",
+
+		"green":        "#9bf00b",
+		"greenHover":   "#86d109",
+		"greenBright":  "#b6ff3c",
+		"greenNeon":    "#c8ff6b",
+
+		"red":          "#ff4d5e",
+		"orange":       "#ff8a3d",
+		"orangeBright": "#ffae5c",
+		"yellow":       "#ffe14a",
+		"yellowSoft":   "#d6e07a",
+		"blue":         "#6fe0d2",
+		"blueDeep":     "#2f9e8f",
+		"lightBlue":    "#a6f0e6",
+		"purple":       "#b98cff",
+
+		"alphaLow":     "#9bf00b14",
+		"alphaMed":     "#9bf00b33",
+		"alphaHigh":    "#9bf00b59",
+		"shadow":       "#000000cc",
+		"transparent":  "#00000000"
+	},
+
+	"hcDark": {
+		"_doc": "XBOX High Contrast Dark (type hc-dark). Pure-black backgrounds, white text, bright accents. The HC look comes mostly from contrastBorder/contrastActiveBorder set in the source overrides. Extends XBOX ONE.",
+
+		"bg":           "#000000",
+		"bgAlt":        "#0d0d0d",
+		"bgDeep":       "#000000",
+		"bgDeeper":     "#000000",
+
+		"fg":           "#ffffff",
+		"fgMid":        "#f0f0f0",
+		"fgDim":        "#d4d4d4",
+		"fgDimmer":     "#a6a6a6",
+
+		"green":        "#2ecc40",
+		"greenHover":   "#28b138",
+		"greenBright":  "#54e35a",
+		"greenNeon":    "#8cf08c",
+
+		"red":          "#ff6161",
+		"orange":       "#ff9d3d",
+		"orangeBright": "#ffbe6b",
+		"yellow":       "#fff04a",
+		"yellowSoft":   "#fff27a",
+		"blue":         "#6fc3ff",
+		"blueDeep":     "#3aa0ff",
+		"lightBlue":    "#a6e0ff",
+		"purple":       "#d09bff",
+
+		"alphaLow":     "#ffffff1f",
+		"alphaMed":     "#ffffff40",
+		"alphaHigh":    "#ffffff66",
+		"shadow":       "#00000000",
+		"transparent":  "#00000000"
+	},
+
+	"hcLight": {
+		"_doc": "XBOX High Contrast Light (type hc-light). Pure-white backgrounds, black text, dark saturated accents for contrast. The HC look comes mostly from contrastBorder/contrastActiveBorder set in the source overrides. Extends XBOX 360.",
+
+		"bg":           "#ffffff",
+		"bgAlt":        "#f2f2f2",
+		"bgDeep":       "#ffffff",
+		"bgDeeper":     "#ffffff",
+
+		"fg":           "#000000",
+		"fgMid":        "#1a1a1a",
+		"fgDim":        "#333333",
+		"fgDimmer":     "#595959",
+
+		"green":        "#0a5c0a",
+		"greenHover":   "#084a08",
+		"greenBright":  "#0a7a0a",
+		"greenNeon":    "#0a8a0a",
+
+		"red":          "#b30000",
+		"orange":       "#9c4a00",
+		"orangeBright": "#b35900",
+		"yellow":       "#6b5300",
+		"yellowSoft":   "#6b5300",
+		"blue":         "#00457a",
+		"blueDeep":     "#003a66",
+		"lightBlue":    "#005a9e",
+		"purple":       "#5a2db3",
+
+		"alphaLow":     "#0000001f",
+		"alphaMed":     "#00000040",
+		"alphaHigh":    "#00000066",
+		"shadow":       "#00000000",
+		"transparent":  "#00000000"
 	}
 }
