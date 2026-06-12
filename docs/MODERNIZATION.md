@@ -1,6 +1,6 @@
 # Xbox VS Code Theme — Remaining Work
 
-> **Status (v0.4.0):** Phases 1–3 of the original modernization plan are complete on branch `modernize/phase-1-2`. A first color experiment round (Tier 1 brand markers + tab/list polish + title bar legibility) is complete on branch `color/tier-1`. This document tracks **only what's left**.
+> **Status (v0.7.1):** Phases 1–3 of the original modernization plan are complete, plus the v0.7.0 theme expansion (XBOX Original 2001 + High Contrast Dark/Light) and accessibility fixes are shipped. A bundled **XBOX Icons** file icon theme (from the MIT-licensed [vscode-icons](https://github.com/vscode-icons/vscode-icons) project) has been added. This document tracks **only what's left**.
 >
 > See `CHANGELOG.md` for what shipped, and commit `5525003` for the original full plan if you need historical context.
 
@@ -10,15 +10,15 @@
 
 The build pipeline (`npm run build` / `validate` / `test`) and CI workflow (`.github/workflows/ci.yml`) are in place, but publishing is still manual.
 
-### 1.1 High-Contrast variants
+### 1.1 High-Contrast variants — ✅ done (v0.7.0)
 
-Marketplace recommends shipping HC variants for accessibility. Trivial now that Phase 3 introduced a generator.
+Shipped via the `extends` generator added to `scripts/build-themes.mjs`.
 
-- [ ] Add `src/palette.json` entries `hcDark` and `hcLight` (saturated palette, mostly pure white/black + Xbox green + pure primaries)
-- [ ] Create `src/themes/hc-dark.json` and `src/themes/hc-light.json` (start by copying dark/light, then bump contrast)
-- [ ] Update `scripts/build-themes.mjs` to iterate over all palettes, not just `dark`/`light`
-- [ ] Register both in `package.json` `contributes.themes` with `uiTheme: "hc-black"` / `"hc-light"`
-- [ ] Add HC screenshots to `images/` and README
+- [x] Add `src/palette.json` entries `hcDark` and `hcLight` (accessible green `#2ecc40` ~9.8:1, pure white/black + contrast borders)
+- [x] Create `src/themes/hcDark.json` (`extends: "one"`) and `src/themes/hcLight.json` (`extends: "xbox360"`)
+- [x] `scripts/build-themes.mjs` iterates over all palettes via the `VARIANTS` array
+- [x] Registered in `package.json` `contributes.themes` with `uiTheme: "hc-black"` / `"hc-light"`
+- [x] HC screenshots added to `images/` and README
 
 ### 1.2 Marketplace publish workflow
 
@@ -35,7 +35,19 @@ Marketplace recommends shipping HC variants for accessibility. Trivial now that 
 
 - [ ] Issue templates (`.github/ISSUE_TEMPLATE/{bug.yml,enhancement.yml}`)
 - [ ] PR template (`.github/PULL_REQUEST_TEMPLATE.md`)
-- [ ] Add a `LICENSE` clarification / attribution note for any externally-derived palette work (see § 4 below)
+- [x] `LICENSE` clarification / attribution note for externally-derived assets — see `THIRD-PARTY-NOTICES.md` (covers the bundled vscode-icons file icons)
+
+---
+
+## 1.5 File icon theme — ✅ added (unreleased)
+
+A bundled **XBOX Icons** file icon theme pairs with the color themes.
+
+- [x] `fileicons/icons/` — full vscode-icons SVG set (v12.18.0)
+- [x] `fileicons/xbox-icon-theme.json` — full mapping (1,336 icon definitions) derived from vscode-icons' generated theme, with `iconPath` rewritten to `./icons/` and empty light-default slots backfilled
+- [x] Registered in `package.json` `contributes.iconThemes` (id `xbox-icons`, label `XBOX Icons`)
+- [x] MIT attribution in `THIRD-PARTY-NOTICES.md` + README
+- [ ] Ship in a future release (CHANGELOG + version bump + publish) — note the VSIX grows ~8 MB from the bundled SVGs
 
 ---
 
@@ -109,7 +121,7 @@ When revisiting:
 
 ## 4. Open questions
 
-- [ ] **Attribution.** Review whether any externally-derived palette work in the theme warrants explicit credit in the README or `LICENSE` before publishing v1.0.0.
+- [x] **Attribution.** Externally-derived assets are now credited in `THIRD-PARTY-NOTICES.md` (bundled vscode-icons file icons, MIT) and referenced from the README. Revisit if more third-party work is added.
 - [ ] **Open VSX publishing.** Worth the extra workflow step + secret to reach VSCodium / Cursor / Gitpod users? (Recommendation: yes — Open VSX install is ~free, audience is non-trivial.)
 - [ ] **Marketing.** r/vscode "I made a thing" post + refresh Marketplace description text when v1.0.0 lands.
 

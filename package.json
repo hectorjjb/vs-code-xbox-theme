@@ -2,7 +2,7 @@
     "name": "xbox-theme",
     "displayName": "Xbox Theme",
     "description": "Visual Studio Code color themes inspired by every Xbox console generation (Original, 360, ONE, Series X) plus High Contrast Dark & Light editions.",
-    "version": "0.7.1",
+    "version": "0.8.0",
     "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",
@@ -109,6 +109,13 @@
                 "label": "XBOX High Contrast Light",
                 "uiTheme": "hc-light",
                 "path": "./themes/xbox-hc-light.color-theme.json"
+            }
+        ],
+        "iconThemes": [
+            {
+                "id": "xbox-icons",
+                "label": "XBOX Icons",
+                "path": "./fileicons/xbox-icon-theme.json"
             }
         ]
     }

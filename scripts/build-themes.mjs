@@ -10,6 +10,9 @@
  * Outputs:
  *   themes/xbox-<v>.color-theme.json   — what ships in the .vsix
  *
+ * Note: the bundled "XBOX Icons" file icon theme is NOT built here — its SVGs
+ * and mapping live statically under fileicons/ (vendored from vscode-icons, MIT).
+ *
  * Substitution rule: any string value matching the regex /^\$([a-zA-Z][a-zA-Z0-9]*)$/
  * is replaced with `palette[variant][role]`. Literal hex values pass through.
  * An unknown $role triggers a build error.

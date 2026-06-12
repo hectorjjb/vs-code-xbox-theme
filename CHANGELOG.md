@@ -4,6 +4,21 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] — 2026-06-11
+
+### Added
+
+- **XBOX Icons file icon theme** — a full-coverage file/folder icon set for the Explorer that pairs with the color themes (1,336 icon definitions spanning common languages, frameworks, configs, and folders). Enable via **Preferences: File Icon Theme → XBOX Icons**. The icon theme is independent of the color theme and can be mixed with any theme or pinned per-workspace via `workbench.iconTheme`.
+- `THIRD-PARTY-NOTICES.md` documenting bundled third-party assets.
+
+### Changed
+
+- README and `docs/MODERNIZATION.md` updated to document the file icon theme and its attribution.
+
+### Credits
+
+- File icons are bundled from the MIT-licensed [vscode-icons](https://github.com/vscode-icons/vscode-icons) project (© 2016 Roberto Huertas).
+
 ## [0.7.1] — 2026-06-11
 
 ### Fixed

@@ -22,6 +22,8 @@ Visual Studio Code color themes inspired by the Xbox console generations:
 - **XBOX High Contrast Dark** — pure-black background with white text, bright contrast borders, and an accessible green accent (`#2ecc40`, ~9.8:1 contrast).
 - **XBOX High Contrast Light** — pure-white background with black text and strong dark-green/blue contrast borders.
 
+Plus a matching **XBOX Icons** file icon theme for the Explorer (see below).
+
 ---
 
 ## Install
@@ -54,6 +56,34 @@ These themes are tuned for VS Code's semantic highlighting and bracket-pair colo
   "editor.guides.bracketPairs": "active"
 }
 ```
+
+---
+
+## File icons
+
+The extension also ships an **XBOX Icons** file icon theme that pairs with the
+color themes, giving the Explorer full-coverage icons for files, folders, and
+languages.
+
+To enable it:
+
+1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
+2. Run **Preferences: File Icon Theme**.
+3. Pick **XBOX Icons**.
+
+The icon theme is independent of the color theme — you can mix it with any
+color theme (or switch back to your previous icons) at any time. Teams can pin
+it per-workspace via `.vscode/settings.json`:
+
+```jsonc
+{
+  "workbench.iconTheme": "xbox-icons"
+}
+```
+
+> The file icons are bundled from the MIT-licensed
+> [vscode-icons](https://github.com/vscode-icons/vscode-icons) project.
+> See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution.
 
 ---
 
@@ -98,3 +128,5 @@ If you find a UI element that isn't colored well (or at all), please open an iss
 ## License
 
 [Apache-2.0](LICENSE) © Hector Jimenez
+
+Bundled file icons are from the MIT-licensed [vscode-icons](https://github.com/vscode-icons/vscode-icons) project — see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
