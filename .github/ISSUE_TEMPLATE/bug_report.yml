@@ -17,7 +17,8 @@ body:
         - XBOX Series X (2020)
         - XBOX High Contrast Dark
         - XBOX High Contrast Light
-        - XBOX Icons (file icon theme)
+        - XBOX Icons Colorful (file icon theme)
+        - XBOX Icons Green (file icon theme)
     validations:
       required: true
   - type: textarea

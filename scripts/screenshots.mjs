@@ -18,8 +18,9 @@
  * Output (committed, consumed by README.md):
  *   images/<theme>.png          — workbench mock per variant (xbox-360.png, …)
  *   images/<theme>-palette.png  — palette swatch sheet per variant
- *   images/icons-before.png     — file tree with default icons
- *   images/icons-after.png      — file tree with the XBOX icon theme
+ *   images/icons-default.png    — file tree with built-in (default) icons
+ *   images/icons-colorful.png   — file tree with the XBOX Icons Colorful theme
+ *   images/icons-green.png      — file tree with the XBOX Icons Green theme
  *
  * These are clean, reproducible mocks — not pixel-identical to a real VS Code
  * capture — and regenerate with identical framing/sizing on every run.
@@ -36,6 +37,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const OUT_DIR = resolve(ROOT, "images");
 const ICON_THEME = resolve(ROOT, "fileicons/xbox-icon-theme.json");
+const GREEN_ICON_THEME = resolve(ROOT, "fileicons/xbox-icon-theme-green.json");
 const SCALE = 2;
 
 const LABELS = {
@@ -298,7 +300,9 @@ function paletteHTML(label, roles, type) {
 </div></body></html>`;
 }
 
-function iconTreeHTML(theme, mapping, useXbox) {
+function iconTreeHTML(theme, mapping, variant) {
+	// variant: "default" (built-in generic icons) | "colorful" | "green"
+	const headLabel = { default: "Default", colorful: "XBOX Icons Colorful", green: "XBOX Icons Green" }[variant];
 	const c = theme.colors;
 	const g = (k, fb) => c[k] ?? fb;
 	const bg = g("sideBar.background", "#1e1e1e");
@@ -317,12 +321,12 @@ function iconTreeHTML(theme, mapping, useXbox) {
 			? `<svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><polyline points="${t.open ? "4,6 8,10 12,6" : "6,4 10,8 6,12"}" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`
 			: "";
 		let src;
-		if (useXbox) {
+		if (variant === "default") {
+			src = t.folder ? genericFolder : genericFile;
+		} else {
 			const def = mapping.iconDefinitions[t.id]
 				?? mapping.iconDefinitions[t.folder ? mapping.folder : mapping.file];
 			src = def ? svgDataUri(def.iconPath) : "";
-		} else {
-			src = t.folder ? genericFolder : genericFile;
 		}
 		return `<div class="row" style="padding-left:${pad}px;${bgc}color:${fgc}">
 			<span class="chev">${chevron}</span><img class="ico" src="${src}"><span>${esc(t.name)}</span></div>`;
@@ -334,7 +338,7 @@ function iconTreeHTML(theme, mapping, useXbox) {
 .row{height:24px;display:flex;align-items:center;gap:7px;font-size:13px;white-space:nowrap}
 .chev{width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;opacity:.75}
 .ico{width:16px;height:16px}
-</style></head><body><div class="panel"><div class="head">Explorer — ${useXbox ? "XBOX Icons" : "Default"}</div>${rows}</div></body></html>`;
+</style></head><body><div class="panel"><div class="head">Explorer — ${headLabel}</div>${rows}</div></body></html>`;
 }
 
 async function main() {
@@ -375,14 +379,20 @@ async function main() {
 	}
 
 	const iconTheme = themes.find((t) => t.key === "one").theme;
-	for (const [name, useXbox] of [["icons-before", false], ["icons-after", true]]) {
-		await page.setContent(iconTreeHTML(iconTheme, mapping, useXbox), { waitUntil: "networkidle" });
+	const greenMapping = loadJSON(GREEN_ICON_THEME);
+	const iconSets = [
+		["icons-default", "default", null],
+		["icons-colorful", "colorful", mapping],
+		["icons-green", "green", greenMapping],
+	];
+	for (const [name, variant, map] of iconSets) {
+		await page.setContent(iconTreeHTML(iconTheme, map, variant), { waitUntil: "networkidle" });
 		await (await page.$(".panel")).screenshot({ path: resolve(OUT_DIR, `${name}.png`) });
 		console.log(`wrote images/${name}.png`);
 	}
 
 	await browser.close();
-	console.log(`\nDone — ${themes.length * 2 + 2} images in ${OUT_DIR}`);
+	console.log(`\nDone — ${themes.length * 2 + iconSets.length} images in ${OUT_DIR}`);
 }
 
 main().catch((err) => {

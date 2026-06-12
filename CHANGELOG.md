@@ -4,6 +4,22 @@ All notable changes to the **Xbox Theme** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.0] — 2026-06-12
+
+### Added
+
+- **XBOX Icons Green** — a second file icon theme that recolors the full icon set into a single Xbox-green duotone for a brand-consistent, monochrome-style Explorer. Enable via **Preferences: File Icon Theme → XBOX Icons Green**. Derived deterministically from the colorful set (baked SVG `feColorMatrix` + green-ramp `feComponentTransfer`, so each icon keeps its internal shape/shading instead of flattening to a silhouette).
+
+### Changed
+
+- The original file icon theme is now labelled **XBOX Icons Colorful** (id `xbox-icons` is unchanged, so existing selections keep working).
+- Bundled icons are split into `fileicons/icons/colorful/` and `fileicons/icons/green/`; `npm run build:icons` regenerates both in one pass.
+- README documents both icon themes with a Default / Colorful / Green comparison.
+
+### Internal
+
+- `scripts/icon-green.mjs` — shared green-duotone recolor used by the icon build and validated by `npm run validate` (both icon themes' paths are checked). The screenshot generator now renders default/colorful/green Explorer panels.
+
 ## [0.8.2] — 2026-06-12
 
 ### Changed

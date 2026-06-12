@@ -26,7 +26,10 @@ import { VARIANTS } from "./variants.mjs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 
-const ICON_THEME = "fileicons/xbox-icon-theme.json";
+const ICON_THEMES = [
+	"fileicons/xbox-icon-theme.json",
+	"fileicons/xbox-icon-theme-green.json",
+];
 
 const FILES = VARIANTS.map(v => v.out);
 
@@ -222,7 +225,7 @@ function main() {
 		console.log("");
 	}
 
-	validateIconTheme(ICON_THEME);
+	for (const t of ICON_THEMES) validateIconTheme(t);
 
 	console.log("parity");
 	if (themes[FILES[0]] && themes[FILES[1]]) {

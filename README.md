@@ -22,7 +22,7 @@ Visual Studio Code color themes inspired by the Xbox console generations:
 - **XBOX High Contrast Dark** — pure-black background with white text, bright contrast borders, and an accessible green accent (`#2ecc40`, ~9.8:1 contrast).
 - **XBOX High Contrast Light** — pure-white background with black text and strong dark-green/blue contrast borders.
 
-Plus a matching **XBOX Icons** file icon theme for the Explorer (see below).
+Plus matching **XBOX Icons** file icon themes for the Explorer — **Colorful** and **Green** (see below).
 
 ---
 
@@ -61,35 +61,40 @@ These themes are tuned for VS Code's semantic highlighting and bracket-pair colo
 
 ## File icons
 
-The extension also ships an **XBOX Icons** file icon theme that pairs with the
-color themes, giving the Explorer full-coverage icons for files, folders, and
-languages.
+The extension also ships **two** file icon themes that pair with the color
+themes, giving the Explorer full-coverage icons for files, folders, and
+languages:
 
-To enable it:
+- **XBOX Icons Colorful** — the familiar full-color icon set.
+- **XBOX Icons Green** — the same icons recolored into a single Xbox-green
+  duotone, for a brand-consistent, monochrome-style look.
+
+To enable one:
 
 1. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).
 2. Run **Preferences: File Icon Theme**.
-3. Pick **XBOX Icons**.
+3. Pick **XBOX Icons Colorful** or **XBOX Icons Green**.
 
-Before and after enabling **XBOX Icons** in the Explorer:
+The Explorer with the default icons, **XBOX Icons Colorful**, and **XBOX Icons Green**:
 
-| Before (default icons) | After (XBOX Icons) |
-|---|---|
-| ![Explorer with default icons](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-before.png) | ![Explorer with XBOX Icons](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-after.png) |
+| Default icons | XBOX Icons Colorful | XBOX Icons Green |
+|---|---|---|
+| ![Explorer with default icons](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-default.png) | ![Explorer with XBOX Icons Colorful](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-colorful.png) | ![Explorer with XBOX Icons Green](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/icons-green.png) |
 
-The icon theme is independent of the color theme — you can mix it with any
+The icon themes are independent of the color theme — you can mix either with any
 color theme (or switch back to your previous icons) at any time. Teams can pin
-it per-workspace via `.vscode/settings.json`:
+one per-workspace via `.vscode/settings.json`:
 
 ```jsonc
 {
+  // "xbox-icons" (colorful) or "xbox-icons-green"
   "workbench.iconTheme": "xbox-icons"
 }
 ```
 
 > The file icons are bundled from the MIT-licensed
-> [vscode-icons](https://github.com/vscode-icons/vscode-icons) project.
-> See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution.
+> [vscode-icons](https://github.com/vscode-icons/vscode-icons) project; the green
+> variant is a derived recolor. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) for attribution.
 
 ---
 

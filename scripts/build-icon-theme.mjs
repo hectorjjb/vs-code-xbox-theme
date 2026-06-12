@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 /**
- * Re-vendor the bundled "XBOX Icons" file icon theme from vscode-icons (MIT).
+ * Re-vendor the bundled XBOX file icon themes from vscode-icons (MIT).
+ *
+ * Two icon themes are produced from one vendored set:
+ *   • "XBOX Icons Colorful" — the upstream full-color icons (icons/colorful/).
+ *   • "XBOX Icons Green"    — an Xbox-green duotone recolor of the same set,
+ *                             derived deterministically (icons/green/, see
+ *                             scripts/icon-green.mjs).
  *
  * What it does (reproducible — safe to re-run):
  *   1) Downloads the vscode-icons .vsix for a pinned version from the Marketplace.
  *   2) Extracts it (uses the system `unzip`).
- *   3) Copies every SVG into fileicons/icons/ (the directory is rebuilt from scratch).
+ *   3) Copies every SVG into fileicons/icons/colorful/ (rebuilt from scratch).
  *   4) Reads vscode-icons' generated icon-theme JSON, rewrites each `iconPath`
- *      from `../../icons/` to `./icons/`, and backfills the empty light-default
- *      slots with their dark equivalents so light/HC themes still get icons.
- *   5) Writes fileicons/xbox-icon-theme.json.
+ *      from `../../icons/` to `./icons/colorful/`, and backfills the empty
+ *      light-default slots with their dark equivalents so light/HC themes still
+ *      get icons. Writes fileicons/xbox-icon-theme.json.
+ *   5) Greenifies every SVG into fileicons/icons/green/ and writes the derived
+ *      fileicons/xbox-icon-theme-green.json (same map, paths re-pointed).
  *
  * Usage:
  *   node scripts/build-icon-theme.mjs            # uses the pinned VERSION below
@@ -27,6 +35,7 @@ import {
 import { dirname, resolve, join } from "node:path";
 import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
+import { greenifySvg } from "./icon-green.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -36,9 +45,13 @@ const EXTENSION = "vscode-icons";
 // Pinned upstream version. Keep in sync with THIRD-PARTY-NOTICES.md.
 const DEFAULT_VERSION = "12.18.0";
 
-const ICONS_OUT = resolve(ROOT, "fileicons/icons");
+const ICONS_OUT = resolve(ROOT, "fileicons/icons/colorful");
+const GREEN_OUT = resolve(ROOT, "fileicons/icons/green");
 const THEME_OUT = resolve(ROOT, "fileicons/xbox-icon-theme.json");
+const GREEN_THEME_OUT = resolve(ROOT, "fileicons/xbox-icon-theme-green.json");
 const ICON_PATH_PREFIX = "../../icons/";
+const COLORFUL_DIR = "./icons/colorful/";
+const GREEN_DIR = "./icons/green/";
 
 // The 5 light-default icon ids ship with an empty iconPath upstream; map them
 // to their dark equivalents so light/HC themes still render a default icon.
@@ -75,11 +88,43 @@ function rewriteIconPaths(theme) {
 	let rewritten = 0;
 	for (const def of Object.values(theme.iconDefinitions)) {
 		if (typeof def.iconPath === "string" && def.iconPath.startsWith(ICON_PATH_PREFIX)) {
-			def.iconPath = "./icons/" + def.iconPath.slice(ICON_PATH_PREFIX.length);
+			def.iconPath = COLORFUL_DIR + def.iconPath.slice(ICON_PATH_PREFIX.length);
 			rewritten++;
 		}
 	}
 	return rewritten;
+}
+
+/** Verify every iconPath in a theme resolves on disk (relative to fileicons/). */
+function verifyPaths(theme, label) {
+	let missing = 0;
+	for (const [id, def] of Object.entries(theme.iconDefinitions)) {
+		if (!def.iconPath || !existsSync(resolve(dirname(THEME_OUT), def.iconPath))) {
+			console.error(`  missing (${label}): ${id} -> ${def.iconPath}`);
+			missing++;
+		}
+	}
+	if (missing > 0) throw new Error(`${missing} ${label} icon path(s) do not resolve`);
+}
+
+/** Derive the green icon set + theme from the just-built colorful one. */
+function buildGreen(theme, svgs) {
+	rmSync(GREEN_OUT, { recursive: true, force: true });
+	mkdirSync(GREEN_OUT, { recursive: true });
+	for (const f of svgs) {
+		writeFileSync(join(GREEN_OUT, f), greenifySvg(readFileSync(join(ICONS_OUT, f), "utf8")));
+	}
+	console.log(`greenified ${svgs.length} SVGs -> fileicons/icons/green/`);
+
+	const green = JSON.parse(JSON.stringify(theme));
+	for (const def of Object.values(green.iconDefinitions)) {
+		if (typeof def.iconPath === "string" && def.iconPath.startsWith(COLORFUL_DIR)) {
+			def.iconPath = GREEN_DIR + def.iconPath.slice(COLORFUL_DIR.length);
+		}
+	}
+	verifyPaths(green, "green");
+	writeFileSync(GREEN_THEME_OUT, JSON.stringify(green, null, 2) + "\n", "utf8");
+	console.log(`wrote fileicons/xbox-icon-theme-green.json (${Object.keys(green.iconDefinitions).length} icon definitions)`);
 }
 
 async function main() {
@@ -99,29 +144,24 @@ async function main() {
 			throw new Error("unexpected vsix layout — icons/ or generated theme JSON not found");
 		}
 
-		// Rebuild fileicons/icons from scratch.
+		// Rebuild fileicons/icons/colorful from scratch.
 		rmSync(ICONS_OUT, { recursive: true, force: true });
 		mkdirSync(ICONS_OUT, { recursive: true });
 		const svgs = readdirSync(srcIcons).filter(f => f.endsWith(".svg"));
 		for (const f of svgs) copyFileSync(join(srcIcons, f), join(ICONS_OUT, f));
-		console.log(`copied ${svgs.length} SVGs -> fileicons/icons/`);
+		console.log(`copied ${svgs.length} SVGs -> fileicons/icons/colorful/`);
 
 		const theme = JSON.parse(readFileSync(srcTheme, "utf8"));
 		const rewritten = rewriteIconPaths(theme);
 		console.log(`rewrote ${rewritten} icon paths`);
 
-		// Verify every iconPath resolves before writing.
-		let missing = 0;
-		for (const [id, def] of Object.entries(theme.iconDefinitions)) {
-			if (!def.iconPath || !existsSync(resolve(dirname(THEME_OUT), def.iconPath))) {
-				console.error(`  missing: ${id} -> ${def.iconPath}`);
-				missing++;
-			}
-		}
-		if (missing > 0) throw new Error(`${missing} icon path(s) do not resolve`);
-
+		verifyPaths(theme, "colorful");
 		writeFileSync(THEME_OUT, JSON.stringify(theme, null, 2) + "\n", "utf8");
 		console.log(`wrote fileicons/xbox-icon-theme.json (${Object.keys(theme.iconDefinitions).length} icon definitions)`);
+
+		// Derive the Xbox-green duotone set + theme from the colorful one.
+		buildGreen(theme, svgs);
+
 		console.log(`\nDone. Remember to update THIRD-PARTY-NOTICES.md if the version changed (vendored v${version}).`);
 	} finally {
 		rmSync(work, { recursive: true, force: true });
