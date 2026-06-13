@@ -172,6 +172,10 @@ Issues and pull requests are welcome at [github.com/hectorjjb/vs-code-xbox-theme
 
 If you find a UI element that isn't colored well (or at all), please open an issue with a screenshot and the VS Code version.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full development guide — project
+layout, how the `src/` → `themes/` build works, adding a theme, testing, and the
+release process.
+
 ---
 
 ## License
