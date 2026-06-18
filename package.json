@@ -59,7 +59,7 @@
         "@vscode/vsce": "^3.2.1",
         "ovsx": "^1.0.1",
         "playwright": "^1.60.0",
-        "shiki": "^1.29.2"
+        "shiki": "^4.2.0"
     },
     "contributes": {
         "themes": [
