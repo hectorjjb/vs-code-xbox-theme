@@ -1,6 +1,6 @@
-# Contributing to the Xbox VS Code Theme
+# Contributing to the XBOX VS Code Theme
 
-Thanks for your interest in improving the **Xbox Theme**! This guide covers
+Thanks for your interest in improving the **XBOX Themes**! This guide covers
 everything you need to develop, test, and submit changes.
 
 Issues and pull requests are welcome at
@@ -91,7 +91,7 @@ src/                      # SOURCE OF TRUTH — edit these
 themes/                   # GENERATED color themes that ship in the .vsix — do NOT hand-edit
 fileicons/                # File icon themes (vendored SVGs + mapping JSON)
   icons/colorful/         #   upstream full-color SVGs (vscode-icons)
-  icons/green/            #   derived Xbox-green duotone SVGs
+  icons/green/            #   derived XBOX-green duotone SVGs
   xbox-icon-theme-colorful.json
   xbox-icon-theme-green.json
 scripts/                  # build + tooling (Node ESM, zero runtime deps)
@@ -186,7 +186,7 @@ The file icons are **vendored** from the MIT-licensed
 not authored here. Two themes are produced from one vendored set:
 
 - **XBOX Icons Colorful** — the upstream full-color SVGs (`fileicons/icons/colorful/`).
-- **XBOX Icons Green** — a deterministic Xbox-green duotone recolor
+- **XBOX Icons Green** — a deterministic XBOX-green duotone recolor
   (`fileicons/icons/green/`, via `scripts/icon-green.mjs`).
 
 To re-vendor (e.g. bump the upstream version), with `unzip` available:

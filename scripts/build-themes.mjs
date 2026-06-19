@@ -103,7 +103,7 @@ function build() {
 
 		// A variant may "extend" another: it inherits the base theme's colors,
 		// tokenColors, type and palette, then applies its own color overrides.
-		// Used by the high-contrast and Original Xbox variants so they don't
+		// Used by the high-contrast and Original XBOX variants so they don't
 		// duplicate a full ~700-key source.
 		const base = source.extends ? loadJSON(`src/themes/${source.extends}.json`) : null;
 

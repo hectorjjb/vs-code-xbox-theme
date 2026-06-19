@@ -4,7 +4,7 @@
  *
  * Two icon themes are produced from one vendored set:
  *   • "XBOX Icons Colorful" — the upstream full-color icons (icons/colorful/).
- *   • "XBOX Icons Green"    — an Xbox-green duotone recolor of the same set,
+ *   • "XBOX Icons Green"    — an XBOX-green duotone recolor of the same set,
  *                             derived deterministically (icons/green/, see
  *                             scripts/icon-green.mjs).
  *
@@ -159,7 +159,7 @@ async function main() {
 		writeFileSync(THEME_OUT, JSON.stringify(theme, null, 2) + "\n", "utf8");
 		console.log(`wrote fileicons/xbox-icon-theme-colorful.json (${Object.keys(theme.iconDefinitions).length} icon definitions)`);
 
-		// Derive the Xbox-green duotone set + theme from the colorful one.
+		// Derive the XBOX-green duotone set + theme from the colorful one.
 		buildGreen(theme, svgs);
 
 		console.log(`\nDone. Remember to update THIRD-PARTY-NOTICES.md if the version changed (vendored v${version}).`);

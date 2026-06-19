@@ -6,7 +6,7 @@ This project bundles third-party assets under their respective licenses.
 
 The SVG icons under `fileicons/icons/colorful/` are sourced from the
 **vscode-icons** project and are used under the MIT License. The icons under
-`fileicons/icons/green/` are a derived recolor (Xbox-green duotone) of that same
+`fileicons/icons/green/` are a derived recolor (XBOX-green duotone) of that same
 set, produced by `scripts/icon-green.mjs`, and remain under the MIT License.
 
 - Project: https://github.com/vscode-icons/vscode-icons

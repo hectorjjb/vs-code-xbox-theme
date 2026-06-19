@@ -1,4 +1,4 @@
-<!-- Thanks for contributing to the Xbox Theme! -->
+<!-- Thanks for contributing to the XBOX Themes! -->
 
 ## What does this PR do?
 

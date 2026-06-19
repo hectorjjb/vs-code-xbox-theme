@@ -1,8 +1,8 @@
 {
     "name": "xbox-theme",
-    "displayName": "Xbox Theme",
-    "description": "Visual Studio Code color themes inspired by every Xbox console generation (Original, 360, ONE, Series X) plus High Contrast Dark & Light editions.",
-    "version": "0.9.1",
+    "displayName": "XBOX Themes",
+    "description": "Visual Studio Code color themes inspired by every XBOX console generation (Original, 360, ONE, Series X) plus High Contrast Dark & Light editions.",
+    "version": "0.9.2",
     "icon": "images/xbox-logo.png",
     "publisher": "hector-jimenez",
     "license": "Apache-2.0",

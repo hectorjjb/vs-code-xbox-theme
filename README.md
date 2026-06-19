@@ -1,4 +1,4 @@
-# Xbox Theme for VS Code
+# XBOX Themes for VS Code
 
 [![Marketplace Version](https://vsmarketplacebadges.dev/version-short/hector-jimenez.xbox-theme.svg?label=VS%20Marketplace&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/hector-jimenez.xbox-theme.svg?label=Installs&color=107c10)](https://marketplace.visualstudio.com/items?itemName=hector-jimenez.xbox-theme)
@@ -6,16 +6,16 @@
 [![GitHub stars](https://img.shields.io/github/stars/hectorjjb/vs-code-xbox-theme?color=107c10&logo=github)](https://github.com/hectorjjb/vs-code-xbox-theme/stargazers)
 [![License](https://img.shields.io/badge/license-Apache--2.0-107c10.svg)](LICENSE)
 
-Visual Studio Code color themes inspired by the Xbox console generations:
+Visual Studio Code color themes inspired by the XBOX console generations:
 
-![Xbox console generations](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-console-generations.png)
+![XBOX console generations](https://raw.githubusercontent.com/hectorjjb/vs-code-xbox-theme/main/images/xbox-console-generations.png)
 
 **Console editions** (chronological):
 
 - **XBOX (Original 2001)** — dark theme inspired by the matte-black original console and its translucent neon-green "jewel" logo (`#9bf00b`).
-- **XBOX 360 (2005)** — clean light variant with Xbox green accents.
+- **XBOX 360 (2005)** — clean light variant with XBOX green accents.
 - **XBOX ONE (2013)** — the classic deep-charcoal dashboard look.
-- **XBOX Series X (2020)** — 25th Anniversary edition inspired by the translucent OG Xbox green hardware — neutral warm grays with a soft controller-lime accent.
+- **XBOX Series X (2020)** — 25th Anniversary edition inspired by the translucent OG XBOX green hardware — neutral warm grays with a soft controller-lime accent.
 
 **High-contrast editions** (accessibility):
 
@@ -31,7 +31,7 @@ Plus matching **XBOX Icons** file icon themes for the Explorer — **Colorful** 
 From inside VS Code:
 
 1. Open the Extensions view (`Ctrl+Shift+X` / `Cmd+Shift+X`).
-2. Search for **Xbox Theme**.
+2. Search for **XBOX Themes**.
 3. Click **Install**.
 4. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **Preferences: Color Theme** → pick any **XBOX** theme (console editions or High Contrast).
 
@@ -66,7 +66,7 @@ themes, giving the Explorer full-coverage icons for files, folders, and
 languages:
 
 - **XBOX Icons Colorful** — the familiar full-color icon set.
-- **XBOX Icons Green** — the same icons recolored into a single Xbox-green
+- **XBOX Icons Green** — the same icons recolored into a single XBOX-green
   duotone, for a brand-consistent, monochrome-style look.
 
 To enable one:

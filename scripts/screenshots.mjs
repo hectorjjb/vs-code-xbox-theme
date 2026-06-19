@@ -44,7 +44,7 @@ const LABELS = {
 	one: "XBOX ONE",
 	xbox360: "XBOX 360",
 	seriesX: "XBOX Series X",
-	ogXbox: "Original Xbox",
+	ogXbox: "Original XBOX",
 	hcDark: "XBOX High Contrast",
 	hcLight: "XBOX High Contrast Light",
 };

@@ -1,9 +1,9 @@
-# Xbox VS Code Theme — Remaining Work
+# XBOX VS Code Theme — Remaining Work
 
 > This document tracks **only what's left**. For everything that has shipped —
 > the six color themes (including High Contrast Dark/Light), the two file icon
 > themes (Colorful + Green), the deterministic screenshot generator, the light
-> palette tokenization + Xbox-green rebrand, repo hygiene (issue/PR templates,
+> palette tokenization + XBOX-green rebrand, repo hygiene (issue/PR templates,
 > attribution), and the build/validate/CI pipeline — see `CHANGELOG.md`.
 >
 > See commit `5525003` for the original full modernization plan if you need
@@ -74,7 +74,7 @@ A 12-variant experiment proved that an obvious `$green` wash fails: selecting an
 
 | Variant | Hex | Rationale |
 |---|---|---|
-| **Orange wash** | `#e3641a4d` (30% `$orange`) | Xbox-brand-adjacent (parameter terracotta); orange is rare in syntax → never overlaps; warm + distinctive |
+| **Orange wash** | `#e3641a4d` (30% `$orange`) | XBOX-brand-adjacent (parameter terracotta); orange is rare in syntax → never overlaps; warm + distinctive |
 | **Purple wash** | `#ae81ff40` (25% `$purple`) | Complementary to green = high contrast; classic dark-theme selection; minor overlap with numerics |
 | **Green outline** | `#107c1026` bg + 1px `$greenNeon` outline | Brand-committed with a sharp edge defining the selection boundary |
 

@@ -1,8 +1,15 @@
 # Changelog
 
-All notable changes to the **Xbox Theme** will be documented in this file.
+All notable changes to **XBOX Themes** will be documented in this file.
 
 The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.9.2] — 2026-06-19
+
+### Changed
+
+- **Renamed display name** from "XBOX Theme" (singular) to **"XBOX Themes"** (plural) to accurately reflect that the extension ships six color themes plus two icon themes. The extension ID (`hector-jimenez.xbox-theme`), Marketplace URL, and all theme labels are unchanged — only the title shown in the Marketplace listing, Extensions sidebar, and quick-picker headers updates. Existing installs continue to receive updates seamlessly.
+- The sibling **Visual Studio 2026** extension launched today at <https://marketplace.visualstudio.com/items?itemName=hector-jimenez.vs-xbox-theme> under the same "XBOX Themes" display name, keeping branding consistent across both Marketplaces.
 
 ## [0.9.1] — 2026-06-12
 
@@ -18,7 +25,7 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 
 ### Added
 
-- **XBOX Icons Green** — a second file icon theme that recolors the full icon set into a single Xbox-green duotone for a brand-consistent, monochrome-style Explorer. Enable via **Preferences: File Icon Theme → XBOX Icons Green**. Derived deterministically from the colorful set (baked SVG `feColorMatrix` + green-ramp `feComponentTransfer`, so each icon keeps its internal shape/shading instead of flattening to a silhouette).
+- **XBOX Icons Green** — a second file icon theme that recolors the full icon set into a single XBOX-green duotone for a brand-consistent, monochrome-style Explorer. Enable via **Preferences: File Icon Theme → XBOX Icons Green**. Derived deterministically from the colorful set (baked SVG `feColorMatrix` + green-ramp `feComponentTransfer`, so each icon keeps its internal shape/shading instead of flattening to a silhouette).
 
 ### Changed
 
@@ -34,7 +41,7 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 
 ### Changed
 
-- **Light theme (XBOX 360) rebrand** — accent, selection, and interaction colors shifted from Microsoft-blue to Xbox green: editor selection, active line number, progress bar, menu/list selection, match highlights, fold/hover/drop/peek/snippet tints, button hover, and the notebook/settings change indicators. Semantic colors are intentionally preserved — info-blue, git status, the bracket/syntax rainbow, and terminal ANSI blue/cyan.
+- **Light theme (XBOX 360) rebrand** — accent, selection, and interaction colors shifted from Microsoft-blue to XBOX green: editor selection, active line number, progress bar, menu/list selection, match highlights, fold/hover/drop/peek/snippet tints, button hover, and the notebook/settings change indicators. Semantic colors are intentionally preserved — info-blue, git status, the bracket/syntax rainbow, and terminal ANSI blue/cyan.
 - **XBOX High Contrast Light** — focus/hover and modified-item indicators nudged to green to match the rebrand.
 - README screenshots are now generated deterministically, and each theme includes a collapsible **color palette** sheet.
 
@@ -94,12 +101,12 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 ## [0.6.3] — 2026-06-11
 
 ### Changed
-- Updated the extension icon to the green Xbox sphere logo.
+- Updated the extension icon to the green XBOX sphere logo.
 
 ## [0.6.2] — 2026-06-10
 
 ### Changed
-- Tuned terminal ANSI palette for XBOX ONE and XBOX Series X: `ansiGreen` now uses each variant's canonical Xbox green (Xbox green `#107c10` / controller lime `#7fc83a`), `ansiYellow` uses Xbox yellow (`#ffd800` / `#ffe34a`), and `ansiBrightBlue` upgraded to Xbox blue `#0078d4`. Affects generic terminal output (git, npm, ls --color); Copilot CLI emits truecolor and is unaffected.
+- Tuned terminal ANSI palette for XBOX ONE and XBOX Series X: `ansiGreen` now uses each variant's canonical XBOX green (XBOX green `#107c10` / controller lime `#7fc83a`), `ansiYellow` uses XBOX yellow (`#ffd800` / `#ffe34a`), and `ansiBrightBlue` upgraded to XBOX blue `#0078d4`. Affects generic terminal output (git, npm, ls --color); Copilot CLI emits truecolor and is unaffected.
 
 ## [0.6.1] — 2026-06-10
 
@@ -110,17 +117,17 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 
 ### Added
 
-- **XBOX Series X theme** — new dark variant celebrating the Xbox 25th Anniversary, inspired by the translucent OG Xbox green hardware (2001). Neutral warm grays with a soft controller-lime accent (`#7fc83a`), dark text on every lime surface, and Xbox-yellow (`#ffd800`) activity-bar badges. Built from the same `src/themes/` source pipeline as the other variants; selectable as **XBOX Series X** in the theme picker.
+- **XBOX Series X theme** — new dark variant celebrating the XBOX 25th Anniversary, inspired by the translucent OG XBOX green hardware (2001). Neutral warm grays with a soft controller-lime accent (`#7fc83a`), dark text on every lime surface, and XBOX-yellow (`#ffd800`) activity-bar badges. Built from the same `src/themes/` source pipeline as the other variants; selectable as **XBOX Series X** in the theme picker.
 - `docs/xbox-console-generations.png` — console-generations reference image used in the README and as the long-term roadmap for the four-theme set (XBOX, XBOX 360, XBOX ONE, XBOX Series X).
 
 ### Changed
 
-- Renamed contributed theme labels and underlying file artifacts to align with Xbox console generations. **Note**: file paths in `themes/` changed — users who selected the previous labels (`Xbox Dark`, `Xbox Light`) may need to reselect from the Color Theme picker after upgrading.
-  - `Xbox Dark` → **XBOX ONE** (`themes/xbox-dark.color-theme.json` → `themes/xbox-one.color-theme.json`)
-  - `Xbox Light` → **XBOX 360** (`themes/xbox-light.color-theme.json` → `themes/xbox-360.color-theme.json`)
+- Renamed contributed theme labels and underlying file artifacts to align with XBOX console generations. **Note**: file paths in `themes/` changed — users who selected the previous labels (`XBOX Dark`, `XBOX Light`) may need to reselect from the Color Theme picker after upgrading.
+  - `XBOX Dark` → **XBOX ONE** (`themes/xbox-dark.color-theme.json` → `themes/xbox-one.color-theme.json`)
+  - `XBOX Light` → **XBOX 360** (`themes/xbox-light.color-theme.json` → `themes/xbox-360.color-theme.json`)
   - new: **XBOX Series X** (`themes/xbox-series-x.color-theme.json`)
 - Source files in `src/themes/` renamed to match: `dark.json` → `one.json`, `light.json` → `xbox360.json`, plus new `seriesX.json`. Palette variant keys in `src/palette.json` renamed correspondingly (`dark` → `one`, `light` → `xbox360`, new `seriesX`).
-- Activity-bar badges across all three themes now use Xbox-yellow (`#ffd800`) with black text for maximum legibility.
+- Activity-bar badges across all three themes now use XBOX-yellow (`#ffd800`) with black text for maximum legibility.
 
 ### Planned
 
@@ -143,11 +150,11 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 #### Color coverage
 
 - Coverage for modern VS Code UI surfaces in both themes: command center, sticky scroll (editor + panel + sidebar + terminal), inlay hints, ghost text / inline suggestions, bracket pair guides, chat & inline chat, agents, inline edit, testing, terminal command decorations, profile badge, multi-diff editor, banner, merge editor, SCM graph, action bar, toolbar, comments view, ports, welcome page, editor watermark, debug view, keybinding table, tree table, notebook expansions, settings editor.
-- `semanticHighlighting: true` + baseline `semanticTokenColors` block mapped to the Xbox palette.
+- `semanticHighlighting: true` + baseline `semanticTokenColors` block mapped to the XBOX palette.
 - 63 additional color keys for previously-uncovered VS Code surfaces: `radio.*`, `notebook.{editorBackground,cellBorderColor,focusedEditorBorder}`, `debugConsole.{error,info,warning,source}Foreground`, `keybindingLabel.*`, `activityBarTop.*`, `extensionButton.*`, `welcomePage.{button,tileShadow}*`, `activityErrorBadge.*`, `activityWarningBadge.*`, `panelTitleBadge.*`, `diffEditorGutter.*`, `diffEditorOverview.*`, `statusBarItem.remoteHover*`, `tab.{hover,unfocusedHover}Foreground`, etc.
 - Restored light theme parity for `charts.*` and most TextMate scopes previously only in dark.
 
-#### Tier 1 brand experiment — Xbox green markers
+#### Tier 1 brand experiment — XBOX green markers
 
 - `focusBorder`, `sash.hoverBorder` → `$greenNeon` (#9bf00b) on dark — focus rings now pop instead of blending in.
 - `panelTitle.activeBorder` → `$green`, `panelTitle.activeForeground` → `$greenNeon` — active panel tab marker.
@@ -177,8 +184,8 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 
 ### Added
 
-- Registered **Xbox Light** in the extension manifest so it is selectable from the Color Theme picker.
-- Marketplace metadata: `galleryBanner` (Xbox green), badges, `qna`, `sponsor`, `extensionKind`, expanded `keywords`.
+- Registered **XBOX Light** in the extension manifest so it is selectable from the Color Theme picker.
+- Marketplace metadata: `galleryBanner` (XBOX green), badges, `qna`, `sponsor`, `extensionKind`, expanded `keywords`.
 - `.vscodeignore` so dev-only files are excluded from the published `.vsix`.
 - Modern README with badges, install instructions, dark + light screenshots, recommended settings, and palette table.
 - Changelog adopts the Keep a Changelog format.
@@ -186,7 +193,7 @@ The format is based on [Keep a Changelog 1.1](https://keepachangelog.com/en/1.1.
 ### Changed
 
 - Bumped `engines.vscode` from `^1.44.0` to `^1.74.0` (covers >99% of installed VS Code).
-- Renamed contributed labels: `Xbox Dark Theme` → `Xbox Dark`, added `Xbox Light`.
+- Renamed contributed labels: `XBOX Dark Theme` → `XBOX Dark`, added `XBOX Light`.
 - Moved `xbox_one.png` into `images/` and updated the `icon` path.
 - Updated `description` to mention both dark and light themes.
 

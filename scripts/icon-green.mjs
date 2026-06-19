@@ -1,5 +1,5 @@
 /**
- * Xbox-green duotone recolor for the bundled file icons.
+ * XBOX-green duotone recolor for the bundled file icons.
  *
  * The "XBOX Icons Green" theme is derived deterministically from the full-color
  * "XBOX Icons Colorful" set by baking a single SVG <filter> into each icon:
